@@ -1,0 +1,89 @@
+graph TB
+      subgraph "Frontend - NextJS"
+          A[Next.js Application]
+          A1[Performance Metrics Page]
+          A2[Edit Snapshot Policy Page]
+          A3[Sidebar Navigation]
+          A4[Recharts Components]
+          A5[Form Components]
+          A6[Tailwind CSS Styling]
+
+          A --> A1
+          A --> A2
+          A --> A3
+          A1 --> A4
+          A2 --> A5
+          A --> A6
+      end
+
+      subgraph "HTTP Communication"
+          B[Axios HTTP Client]
+          B1[GET /api/metrics]
+          B2[GET /api/snapshot-policy/:uuid]
+          B3[PUT /api/snapshot-policy/:uuid]
+
+          B --> B1
+          B --> B2
+          B --> B3
+      end
+
+      subgraph "Backend - AdonisJS"
+          C[AdonisJS API Server]
+          C1[Metrics Controller]
+          C2[Snapshot Policy Controller]
+          C3[Route Handler]
+          C4[Middleware]
+          C5[Validation]
+
+          C --> C1
+          C --> C2
+          C --> C3
+          C --> C4
+          C --> C5
+      end
+
+      subgraph "Data Layer"
+          D[Data Source<br/>#40;JSON File#41;]
+          D1[Time Series Data]
+          D2[Snapshot Policy Config]
+          D3[Cluster Information]
+
+          D --> D1
+          D --> D2
+          D --> D3
+
+          
+      end
+
+      subgraph "User Management"
+          F[User Context]
+          F1[User Selection]
+          F2[Cluster Association]
+
+          F --> F1
+          F --> F2
+      end
+
+      %% Frontend to Backend Communication
+      A1 --> B1
+      A2 --> B2
+      A2 --> B3
+
+      %% Backend API Endpoints
+      B1 --> C1
+      B2 --> C2
+      B3 --> C2
+
+      %% Backend to Data Layer
+      C1 --> D1
+      C2 --> D2
+      C --> D3
+
+      %% User Management
+      A3 --> F1
+      F2 --> C
+
+      %% Data Flow Labels
+      B1 -.->|"IOPS & Throughput<br/>Time Series Data"| A4
+      B2 -.->|"Policy Configuration<br/>JSON"| A5
+      B3 -.->|"Updated Policy<br/>Settings"| C2

@@ -1,0 +1,40 @@
+ Test Suite Summary
+
+  Unit Tests (25 tests passing)
+
+  - MetricsController (16 tests):
+    - Resolution selection logic for different time ranges
+    - Data point calculation accuracy
+    - Interval millisecond conversions
+    - Mock data generation with realistic patterns
+    - Timestamp chronological ordering
+    - IOPS/throughput correlation validation
+  - SnapshotPolicyController (9 tests):
+    - File path generation with UUIDs
+    - Mock policy structure validation
+    - Schedule, deletion, and locking configuration testing
+    - ISO timestamp validation
+    - Business logic validation (weekday schedules, retention periods)
+
+  Integration Tests (9 tests passing)
+
+  - Metrics API:
+    - Parameter validation (clusterId required)
+    - Time range and resolution handling
+    - Data structure validation
+    - Positive metric values
+    - Chronological timestamps
+    - Proper metadata inclusion
+  - Snapshot Policy API:
+    - GET/PUT endpoint validation
+    - Required field validation
+    - Policy creation and updates
+    - System field preservation
+    - File system persistence
+
+  Test Utilities
+
+  - Comprehensive helper functions for test data creation
+  - Validation utilities for metrics and policy structures
+  - Temporary directory management for file operations
+  - Reusable test constants and patterns

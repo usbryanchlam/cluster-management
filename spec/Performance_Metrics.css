@@ -1,0 +1,4874 @@
+/* Panel */
+
+position: absolute;
+width: 200px;
+height: 768px;
+left: 0px;
+top: 0px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* bg/subpanel */
+background: #242C35;
+border: 1px solid #283038;
+
+
+/* Frame 145 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 180px;
+height: 18px;
+left: 12px;
+top: 738px;
+
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 4px;
+
+width: 180px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* AD */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 16 */
+
+position: absolute;
+width: 14px;
+height: 14px;
+left: 2px;
+top: 2px;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* S */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 5px;
+top: 1px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #242C35;
+
+
+
+/* AD\sid */
+
+width: 120px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* arrow_drop_down_FILL0_wght600_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 32.66%;
+right: 32.56%;
+top: 40.73%;
+bottom: 37.81%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 184 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 180px;
+height: 18px;
+left: 12px;
+top: 712px;
+
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 4px;
+
+width: 180px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Tooltip Icon */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* help_black_24dp 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 11.11%;
+right: 11.11%;
+top: 11.11%;
+bottom: 11.11%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Support */
+
+width: 142px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Horizontal Rule */
+
+position: absolute;
+width: 180px;
+height: 32px;
+left: 12px;
+top: 680px;
+
+
+
+/* margin-bottom */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 20px;
+
+
+
+/* margin-top */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+
+
+/* Line */
+
+position: absolute;
+height: 1px;
+left: 0%;
+right: 0%;
+top: 16px;
+
+background: #2D3E4E;
+
+
+/* Frame 125 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: baseline;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 106px;
+height: 32.34px;
+left: 17px;
+top: 24px;
+
+
+
+/* Bug */
+
+width: 24px;
+height: 24.34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 77.36%;
+top: 0%;
+bottom: 24.74%;
+
+background: #0098C5;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.14%;
+right: 84.49%;
+top: 47.26%;
+bottom: 24.74%;
+
+background: #114E85;
+
+
+/* Nexus */
+
+width: 74px;
+height: 32px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+text-align: center;
+letter-spacing: 1px;
+
+/* white */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 130 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 200px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* andy */
+
+width: 31px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 180 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 232px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* calvin */
+
+width: 37px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 181 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 264px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* felix */
+
+width: 28px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 182 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 296px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* ollie */
+
+width: 28px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 183 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 328px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* rudy */
+
+width: 29px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 95 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 80px;
+
+/* black */
+background: #000000;
+
+
+/* dashboard_FILL0_wght400_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Cluster Overview */
+
+width: 114px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 126.06%;
+right: -38.83%;
+top: 25%;
+bottom: 0%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 134.57%;
+right: -37.23%;
+top: 59.38%;
+bottom: 12.5%;
+
+/* white */
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* cluster list */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 0px 0px 8px;
+gap: 8px;
+
+position: absolute;
+width: 188px;
+height: 24px;
+left: 12px;
+top: 176px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 180px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Clusters */
+
+width: 38px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 16px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 127 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 112px;
+
+
+
+/* notifications_FILL0_wght400_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.67%;
+right: 16.67%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Alert Configuration */
+
+width: 122px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 126.06%;
+right: -38.83%;
+top: 25%;
+bottom: 0%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 134.57%;
+right: -37.23%;
+top: 59.38%;
+bottom: 12.5%;
+
+/* white */
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* Frame 128 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 144px;
+
+
+
+/* download_FILL0_wght400_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Software Download */
+
+width: 127px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 126.06%;
+right: -38.83%;
+top: 25%;
+bottom: 0%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 134.57%;
+right: -37.23%;
+top: 59.38%;
+bottom: 12.5%;
+
+/* white */
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* Frame 258 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 11.5px 8px 11.5px 12px;
+gap: 10px;
+
+position: absolute;
+width: 200px;
+height: 24px;
+left: 0px;
+top: 56.34px;
+
+
+
+/* Line */
+
+width: 180px;
+height: 1px;
+
+background: #2D3E4E;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Panel */
+
+position: absolute;
+width: 200px;
+height: 768px;
+left: 0px;
+top: 0px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* bg/subpanel */
+background: #242C35;
+border: 1px solid #283038;
+
+
+/* Frame 124 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 174.16px;
+height: 32px;
+left: 13px;
+top: 14px;
+
+
+
+/* Group 120 */
+
+width: 27.16px;
+height: 27.58px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Union */
+
+position: absolute;
+width: 27.16px;
+height: 27.58px;
+left: 0px;
+top: 2.21px;
+
+background: #0098C5;
+
+
+/* Vector */
+
+position: absolute;
+left: 3.73%;
+right: 84.4%;
+top: 27.54%;
+bottom: 6.91%;
+
+background: #0070A4;
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 88.16%;
+top: 6.91%;
+bottom: 27.66%;
+
+background: #0098C5;
+
+
+/* Rectangle 170 */
+
+position: absolute;
+width: 9px;
+height: 9px;
+left: 9px;
+top: 11.5px;
+
+background: #114E85;
+border-radius: 3px;
+
+
+/* [Cluster Name] */
+
+width: 139px;
+height: 32px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 21px;
+line-height: 32px;
+/* identical to box height, or 152% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 259 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 180px;
+height: 18px;
+left: 12px;
+top: 738px;
+
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 4px;
+
+width: 180px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* AD */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 16 */
+
+position: absolute;
+width: 14px;
+height: 14px;
+left: 2px;
+top: 2px;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* S */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 5px;
+top: 1px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #242C35;
+
+
+
+/* AD\user */
+
+width: 120px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* arrow_drop_down_FILL0_wght600_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 32.66%;
+right: 32.56%;
+top: 40.73%;
+bottom: 37.81%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Horizontal Rule */
+
+position: absolute;
+width: 180px;
+height: 32px;
+left: 12px;
+top: 700px;
+
+
+
+/* margin-bottom */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 20px;
+
+
+
+/* margin-top */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+
+
+/* Line */
+
+position: absolute;
+height: 1px;
+left: 0%;
+right: 0%;
+top: 16px;
+
+background: #2D3E4E;
+
+
+/* Frame 270 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 12.5px 8px 11.5px 12px;
+gap: 10px;
+
+position: absolute;
+width: 200px;
+height: 25px;
+left: 0px;
+top: 40.34px;
+
+
+
+/* Line */
+
+width: 180px;
+height: 1px;
+
+background: #2D3E4E;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 168 */
+
+position: absolute;
+width: 2px;
+height: 24px;
+left: 199px;
+top: 70px;
+
+/* Agave/Regular */
+background: #00A3CA;
+
+
+/* Frame 271 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 52px;
+left: 12px;
+top: 70px;
+
+
+
+/* Frame 19 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 0px 0px 8px;
+gap: 8px;
+
+width: 187px;
+height: 24px;
+
+background: #13181E;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 6 */
+
+width: 4px;
+height: 4px;
+
+/* white */
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Performance Metrics */
+
+width: 167px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame 192 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 0px 0px 8px;
+gap: 8px;
+
+width: 188px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Ellipse 6 */
+
+width: 4px;
+height: 4px;
+
+/* white */
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Edit Snapshot Policy */
+
+width: 168px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Group 119 */
+
+position: absolute;
+width: 4px;
+height: 4px;
+left: 359px;
+top: 271px;
+
+
+
+/* Oval */
+
+position: absolute;
+width: 4px;
+height: 4px;
+left: 359px;
+top: 271px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Panel */
+
+position: absolute;
+width: 1171px;
+height: 765px;
+left: 205px;
+top: 3px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #1B222B;
+border: 1px solid #283038;
+
+
+/* Performance Metrics */
+
+position: absolute;
+width: 192px;
+height: 32px;
+left: 17px;
+top: 12px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 21px;
+line-height: 32px;
+/* identical to box height, or 152% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+
+/* Frame 257 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 3px 8px;
+gap: 4px;
+
+position: absolute;
+left: 89.22%;
+right: 1.38%;
+top: 2.09%;
+bottom: 94.77%;
+
+background: #222C36;
+border: 1px solid #373F48;
+border-radius: 4px;
+
+
+/* label */
+
+width: 72px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+text-align: center;
+
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* arrow_drop_down_FILL0_wght600_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 32.66%;
+right: 32.56%;
+top: 40.73%;
+bottom: 37.81%;
+
+background: #A6AAAE;
+
+
+/* Chart: Throughput */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+isolation: isolate;
+
+position: absolute;
+width: 1136px;
+height: 192px;
+left: 224px;
+top: 284px;
+
+
+
+/* Chart wrapper */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 960px;
+height: 192px;
+
+/* bg/content */
+background: #1B222C;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+z-index: 0;
+
+
+/* Title and Subtitle */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 24px 0px 24px 24px;
+
+width: 960px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 936px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Chart Title */
+
+width: 95px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+/* Text/regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chart Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+isolation: isolate;
+
+width: 960px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Series: Throughput  */
+
+position: absolute;
+width: 2635px;
+height: 97.5px;
+left: 72px;
+top: 21px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Write */
+
+position: absolute;
+width: 2634.2px;
+height: 39.5px;
+left: 72px;
+top: 79px;
+
+/* Agave/Regular */
+border: 1px solid #00A3CA;
+
+
+/* Read */
+
+position: absolute;
+width: 2635px;
+height: 97px;
+left: 72px;
+top: 21px;
+
+border: 1px solid #8E8ECD;
+
+
+/* Area Charts, Grid Lines, and Labels */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 960px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Y Axis Labels and Grid Lines */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 960px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Y Axis Labels */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-end;
+padding: 0px;
+gap: 48px;
+
+width: 64px;
+height: 128px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 2 GB/s */
+
+margin: 0 auto;
+width: 64px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 1 GB/s */
+
+margin: 0 auto;
+width: 64px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 0 GB/s */
+
+margin: 0 auto;
+width: 64px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid lines and X axis */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 8px 0px 0px;
+
+width: 888px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Grid Lines */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 62px;
+
+width: 888px;
+height: 112px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid Line 3 */
+
+box-sizing: border-box;
+
+margin: 0 auto;
+width: 888px;
+height: 1px;
+
+/* Ink/Regular */
+border: 1px solid #424B53;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid Line 4 */
+
+box-sizing: border-box;
+
+margin: 0 auto;
+width: 888px;
+height: 1px;
+
+/* Ink/Regular */
+border: 1px solid #424B53;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid Line 5 */
+
+box-sizing: border-box;
+
+margin: 0 auto;
+width: 888px;
+height: 1px;
+
+/* Ink/Regular */
+border: 1px solid #424B53;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid Lines (logarithmic) */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+display: none;
+width: 1082px;
+height: 168px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* log-group-top */
+
+width: 1082px;
+height: 65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* line-top */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line2 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 10px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line3 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 4px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line 4 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 19px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 3px;
+left: 0px;
+top: 1px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 5px;
+left: 0px;
+top: 5px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 8px;
+left: 0px;
+top: 11px;
+
+
+
+/* spacer (bottom) */
+
+position: absolute;
+width: 1082px;
+height: 45px;
+left: 0px;
+top: 20px;
+
+
+
+/* log-group-middle */
+
+width: 1082px;
+height: 65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* line-top */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 65px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line2 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 75px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line3 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 69px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line 4 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 84px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 3px;
+left: 0px;
+top: 66px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 5px;
+left: 0px;
+top: 70px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 8px;
+left: 0px;
+top: 76px;
+
+
+
+/* spacer (bottom) */
+
+position: absolute;
+width: 1082px;
+height: 45px;
+left: 0px;
+top: 85px;
+
+
+
+/* log-group-bottom */
+
+width: 1082px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* line-top */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 130px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line2 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 140px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line3 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 134px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line 4 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 149px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 3px;
+left: 0px;
+top: 131px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 5px;
+left: 0px;
+top: 135px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 8px;
+left: 0px;
+top: 141px;
+
+
+
+/* spacer (bottom) */
+
+position: absolute;
+width: 1082px;
+height: 18px;
+left: 0px;
+top: 150px;
+
+
+
+/* X Axis Labels and Ticks */
+
+width: 888px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* X Axis Labels */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+height: 24px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* legend */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 160px;
+height: 168px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Legend-Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+
+width: 160px;
+height: 56px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Chart Title */
+
+width: 95px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+/* Ink/Pale */
+color: #858B90;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Legend-pair */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 12px;
+
+width: 160px;
+height: 56px;
+
+background: rgba(34, 44, 54, 0.3);
+border: 1px solid rgba(51, 59, 68, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Read */
+
+width: 38px;
+height: 20px;
+
+/* legend/label */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Value */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: baseline;
+padding: 0px;
+gap: 6px;
+
+width: 68px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 10.3 KB/s */
+
+width: 68px;
+height: 20px;
+
+/* legend/value */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height, or 111% */
+
+color: #8E8ECD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* / */
+
+display: none;
+width: 4px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+/* Ink/Regular */
+color: #424B53;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 21.8% */
+
+display: none;
+width: 36px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+color: #8F9499;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Legend-pair */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 12px;
+
+width: 160px;
+height: 56px;
+
+background: rgba(34, 44, 54, 0.3);
+border-width: 0px 1px 1px 1px;
+border-style: solid;
+border-color: rgba(51, 59, 68, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Write */
+
+width: 41px;
+height: 20px;
+
+/* legend/label */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Value */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: baseline;
+padding: 0px;
+gap: 6px;
+
+width: 81px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 489.8 KB/s */
+
+width: 81px;
+height: 20px;
+
+/* legend/value */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height, or 111% */
+
+/* dataviz-text/write */
+color: #00A3CA;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* / */
+
+display: none;
+width: 4px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+/* Ink/Regular */
+color: #424B53;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 56.4% */
+
+display: none;
+width: 36px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+color: #8F9499;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Time marker */
+
+position: absolute;
+width: 95px;
+height: 130px;
+left: 869px;
+top: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* line marker */
+
+position: absolute;
+width: 1px;
+height: 112px;
+right: 176px;
+top: 56px;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* legend markers */
+
+position: absolute;
+width: 9px;
+height: 29px;
+left: 955px;
+top: 138px;
+
+
+
+/* Legend Indicator 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 9px;
+height: 9px;
+right: 172px;
+top: 138px;
+
+background: #00A3CA;
+/* Cloud/Pale */
+border: 1px solid #F3F4F4;
+border-radius: 100px;
+
+
+/* Legend Indicator 2 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 9px;
+height: 9px;
+right: 172px;
+top: 158px;
+
+/* dataviz-line/read */
+background: #955FD5;
+/* Cloud/Pale */
+border: 1px solid #F3F4F4;
+border-radius: 100px;
+
+
+/* Dec. 5, 10:14am */
+
+position: absolute;
+width: 91px;
+height: 16px;
+right: 176px;
+top: 38px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+color: #FFFFFF;
+
+
+
+/* Chart IOPS */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+isolation: isolate;
+
+position: absolute;
+width: 1136px;
+height: 192px;
+left: 224px;
+top: 72px;
+
+
+
+/* Chart wrapper */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 960px;
+height: 192px;
+
+/* bg/content */
+background: #1B222C;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+z-index: 0;
+
+
+/* Title and Subtitle */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 24px 0px 24px 24px;
+
+width: 642px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 618px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Chart Title */
+
+width: 42px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+/* Text/regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chart Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+isolation: isolate;
+
+width: 960px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* IOPS */
+
+position: absolute;
+width: 1636px;
+height: 98px;
+left: 72px;
+top: 19px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Vector 8 */
+
+position: absolute;
+width: 1636px;
+height: 97px;
+left: 72px;
+top: 19px;
+
+border: 1px solid #955FD5;
+
+
+/* Vector 7 */
+
+position: absolute;
+width: 1636px;
+height: 13px;
+left: 72px;
+top: 104px;
+
+/* Agave/Regular */
+border: 1px solid #00A3CA;
+
+
+/* Area Charts, Grid Lines, and Labels */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+
+width: 960px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Y Axis Labels and Grid Lines */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 960px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Y Axis Labels */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-end;
+padding: 0px;
+gap: 48px;
+
+width: 64px;
+height: 128px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 100k */
+
+margin: 0 auto;
+width: 64px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 50k */
+
+margin: 0 auto;
+width: 64px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 0k */
+
+margin: 0 auto;
+width: 64px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid lines and X axis */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 8px 0px 0px;
+isolation: isolate;
+
+width: 888px;
+height: 144px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Series: Throughput  */
+
+position: absolute;
+display: none;
+width: 2643px;
+height: 97.5px;
+left: 0px;
+top: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Vector 5 */
+
+position: absolute;
+width: 2642.2px;
+height: 39.5px;
+left: 0px;
+top: 80px;
+
+/* Agave/Regular */
+border: 1px solid #00A3CA;
+
+
+/* Vector 6 */
+
+position: absolute;
+width: 2643px;
+height: 97px;
+left: 0px;
+top: 22px;
+
+/* dataviz-line/read */
+border: 1px solid #955FD5;
+
+
+/* Grid Lines */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 62px;
+
+width: 888px;
+height: 112px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Top */
+
+box-sizing: border-box;
+
+margin: 0 auto;
+width: 888px;
+height: 1px;
+
+opacity: 0.4;
+/* Ink/Lighter */
+border: 1px solid #646B72;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid Line 3 */
+
+box-sizing: border-box;
+
+margin: 0 auto;
+width: 888px;
+height: 1px;
+
+opacity: 0.4;
+/* Ink/Lighter */
+border: 1px solid #646B72;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* base */
+
+margin: 0 auto;
+width: 888px;
+height: 1px;
+
+/* Ink/Regular */
+background: #424B53;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Grid Lines (logarithmic) */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+display: none;
+width: 1082px;
+height: 168px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+z-index: 2;
+
+
+/* log-group-top */
+
+width: 1082px;
+height: 65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* line-top */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line2 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 10px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line3 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 4px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line 4 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 19px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 3px;
+left: 0px;
+top: 1px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 5px;
+left: 0px;
+top: 5px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 8px;
+left: 0px;
+top: 11px;
+
+
+
+/* spacer (bottom) */
+
+position: absolute;
+width: 1082px;
+height: 45px;
+left: 0px;
+top: 20px;
+
+
+
+/* log-group-middle */
+
+width: 1082px;
+height: 65px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* line-top */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 65px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line2 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 75px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line3 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 69px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line 4 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 84px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 3px;
+left: 0px;
+top: 66px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 5px;
+left: 0px;
+top: 70px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 8px;
+left: 0px;
+top: 76px;
+
+
+
+/* spacer (bottom) */
+
+position: absolute;
+width: 1082px;
+height: 45px;
+left: 0px;
+top: 85px;
+
+
+
+/* log-group-bottom */
+
+width: 1082px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* line-top */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 130px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line2 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 140px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line3 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 134px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* line 4 */
+
+position: absolute;
+width: 1082px;
+height: 1px;
+left: 0px;
+top: 149px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 3px;
+left: 0px;
+top: 131px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 5px;
+left: 0px;
+top: 135px;
+
+
+
+/* spacer */
+
+position: absolute;
+width: 1082px;
+height: 8px;
+left: 0px;
+top: 141px;
+
+
+
+/* spacer (bottom) */
+
+position: absolute;
+width: 1082px;
+height: 18px;
+left: 0px;
+top: 150px;
+
+
+
+/* X Axis Labels and Ticks */
+
+width: 888px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+z-index: 3;
+
+
+/* X Axis Labels */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+height: 24px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* x axis tick/label */
+
+margin: 0 auto;
+width: 80px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* tic */
+
+position: absolute;
+width: 1px;
+height: 4px;
+left: calc(50% - 1px/2 - 0.17px);
+top: 0px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Nov 25 */
+
+position: absolute;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 4px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* legend */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 160px;
+height: 168px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Legend-Title */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+
+width: 160px;
+height: 56px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Chart Title */
+
+width: 42px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+
+/* Ink/Pale */
+color: #858B90;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Legend-pair */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 12px;
+
+width: 160px;
+height: 56px;
+
+background: rgba(34, 44, 54, 0.3);
+border: 1px solid rgba(51, 59, 68, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Read */
+
+width: 38px;
+height: 20px;
+
+/* legend/label */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Value */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: baseline;
+padding: 0px;
+gap: 6px;
+
+width: 81px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 21.2k IOPS */
+
+width: 81px;
+height: 20px;
+
+/* legend/value */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height, or 111% */
+
+color: #AA7EDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* / */
+
+display: none;
+width: 4px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+/* Ink/Regular */
+color: #424B53;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 21.8% */
+
+display: none;
+width: 36px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+color: #8F9499;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Legend-pair */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 12px;
+
+width: 160px;
+height: 56px;
+
+background: rgba(34, 44, 54, 0.3);
+border-width: 0px 1px 1px 1px;
+border-style: solid;
+border-color: rgba(51, 59, 68, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Write */
+
+width: 41px;
+height: 20px;
+
+/* legend/label */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Value */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: baseline;
+padding: 0px;
+gap: 6px;
+
+width: 84px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 122.0 IOPS */
+
+width: 84px;
+height: 20px;
+
+/* legend/value */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height, or 111% */
+
+/* dataviz-text/write */
+color: #00A3CA;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* / */
+
+display: none;
+width: 4px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+/* Ink/Regular */
+color: #424B53;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 56.4% */
+
+display: none;
+width: 36px;
+height: 16px;
+
+/* legend/meta */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+color: #8F9499;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Time marker */
+
+position: absolute;
+width: 95px;
+height: 130px;
+left: 869px;
+top: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* line marker */
+
+position: absolute;
+width: 1px;
+height: 112px;
+right: 176px;
+top: 56px;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* legend markers */
+
+position: absolute;
+width: 9px;
+height: 23px;
+left: 955px;
+top: 144px;
+
+
+
+/* Legend Indicator 1 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 9px;
+height: 9px;
+right: 172px;
+top: 158px;
+
+background: #00A3CA;
+/* Cloud/Pale */
+border: 1px solid #F3F4F4;
+border-radius: 100px;
+
+
+/* Legend Indicator 2 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 9px;
+height: 9px;
+right: 172px;
+top: 144px;
+
+/* dataviz-line/read */
+background: #955FD5;
+/* Cloud/Pale */
+border: 1px solid #F3F4F4;
+border-radius: 100px;
+
+
+/* Dec. 5, 10:14am */
+
+position: absolute;
+width: 91px;
+height: 16px;
+right: 176px;
+top: 38px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: right;
+letter-spacing: 0.15px;
+
+color: #FFFFFF;
+

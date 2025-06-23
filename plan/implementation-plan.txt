@@ -1,0 +1,35 @@
+Let's start with the backend first since it's the foundation that the frontend will depend on. This approach
+  allows us to:
+
+  1. Set up the data structure and API contracts
+  2. Create mock data for development
+  3. Test the API endpoints before building the frontend
+  4. Ensure the aggregation logic works correctly
+
+  Proposed Build Order:
+
+  Phase 1: Backend Foundation (Start Here)
+
+  1. AdonisJS project setup with TypeScript
+  2. Basic project structure and configuration
+  3. Mock JSON data files for time series and policies
+  4. API routes and controllers for metrics and snapshot policies
+  5. Data aggregation logic for different time ranges
+
+  Phase 2: Frontend Foundation
+
+  6. NextJS project setup with TypeScript and Tailwind
+  7. Basic routing and layout structure
+  8. API client setup with Axios and React Query
+
+  Phase 3: Features Implementation
+
+  9. Performance Metrics dashboard with Recharts
+  10. Edit Snapshot Policy form with validation
+  11. User switching functionality
+
+  Phase 4: Polish & Testing
+
+  12. Error handling and loading states
+  13. Responsive design refinements
+  14. Unit tests for critical components

@@ -1,0 +1,34 @@
+ flowchart TD
+      A[User opens application] --> B[Landing page with sidebar]
+      B --> C{Select functionality}
+
+      C -->|Performance Metrics #40;Default#41;| D[Performance Metrics Dashboard]
+      C -->|Edit Snapshot Policy| E[Edit Snapshot Policy Form]
+
+      D --> D1[View IOPS time series chart and Throughput time series chart]
+      D --> D2[Select time range filter]
+      D --> D3[View real-time metrics]
+      D1 --> D5[Hover for detailed values]
+
+      E --> E1[Enter Policy Name]
+      E --> E2[Set Apply Directory path]
+      E --> E3[Configure Schedule Settings]
+
+      E3 --> E3a[Select Schedule Type]
+      E3 --> E3b[Set Time Zone]
+      E3 --> E3c[Set Snapshot Time]
+      E3 --> E3d[Choose Days of Week]
+      E3 --> E3e[Configure Deletion Policy]
+
+      E --> E4[Snapshot Locking Setting]
+      E4 --> E4a[Enable checkbox if Delete Each Snapshot set to Automatically, otherwise disable checkbox]
+
+      E --> E5[Enable Policy]
+
+      E --> |Save| B
+      E --> |Cancel| B
+
+      B --> F[User switcher dropdown]
+      F --> G[Select different user]
+      G --> H[Reload dashboard for new user]
+      H --> B

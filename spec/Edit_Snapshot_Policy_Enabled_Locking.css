@@ -1,0 +1,3540 @@
+/* Panel */
+
+position: absolute;
+width: 200px;
+height: 768px;
+left: 0px;
+top: 0px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* bg/subpanel */
+background: #242C35;
+border: 1px solid #283038;
+
+
+/* Frame 145 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 180px;
+height: 18px;
+left: 12px;
+top: 738px;
+
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 4px;
+
+width: 180px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* AD */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 16 */
+
+position: absolute;
+width: 14px;
+height: 14px;
+left: 2px;
+top: 2px;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* S */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 5px;
+top: 1px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #242C35;
+
+
+
+/* AD\sid */
+
+width: 120px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* arrow_drop_down_FILL0_wght600_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 32.66%;
+right: 32.56%;
+top: 40.73%;
+bottom: 37.81%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 184 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 180px;
+height: 18px;
+left: 12px;
+top: 712px;
+
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 4px;
+
+width: 180px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Tooltip Icon */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* help_black_24dp 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 11.11%;
+right: 11.11%;
+top: 11.11%;
+bottom: 11.11%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Support */
+
+width: 142px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Horizontal Rule */
+
+position: absolute;
+width: 180px;
+height: 32px;
+left: 12px;
+top: 680px;
+
+
+
+/* margin-bottom */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 20px;
+
+
+
+/* margin-top */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+
+
+/* Line */
+
+position: absolute;
+height: 1px;
+left: 0%;
+right: 0%;
+top: 16px;
+
+background: #2D3E4E;
+
+
+/* Frame 125 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: baseline;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 106px;
+height: 32.34px;
+left: 17px;
+top: 24px;
+
+
+
+/* Bug */
+
+width: 24px;
+height: 24.34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 77.36%;
+top: 0%;
+bottom: 24.74%;
+
+background: #0098C5;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.14%;
+right: 84.49%;
+top: 47.26%;
+bottom: 24.74%;
+
+background: #114E85;
+
+
+/* Nexus */
+
+width: 74px;
+height: 32px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+text-align: center;
+letter-spacing: 1px;
+
+/* white */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 130 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 200px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* andy */
+
+width: 31px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 180 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 232px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* calvin */
+
+width: 37px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 181 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 264px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* felix */
+
+width: 28px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 182 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 296px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* ollie */
+
+width: 28px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 183 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 328px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* rudy */
+
+width: 29px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 86.17%;
+right: 4.26%;
+top: 21.88%;
+bottom: 21.88%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 92.55%;
+right: 5.45%;
+top: 47.66%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+transform: rotate(90deg);
+
+
+/* Frame 95 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 80px;
+
+/* black */
+background: #000000;
+
+
+/* dashboard_FILL0_wght400_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Cluster Overview */
+
+width: 114px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 126.06%;
+right: -38.83%;
+top: 25%;
+bottom: 0%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 134.57%;
+right: -37.23%;
+top: 59.38%;
+bottom: 12.5%;
+
+/* white */
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* cluster list */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 0px 0px 8px;
+gap: 8px;
+
+position: absolute;
+width: 188px;
+height: 24px;
+left: 12px;
+top: 176px;
+
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 180px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Clusters */
+
+width: 38px;
+height: 16px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 16px;
+/* identical to box height, or 160% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 127 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 112px;
+
+
+
+/* notifications_FILL0_wght400_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 16.67%;
+right: 16.67%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Alert Configuration */
+
+width: 122px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 126.06%;
+right: -38.83%;
+top: 25%;
+bottom: 0%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 134.57%;
+right: -37.23%;
+top: 59.38%;
+bottom: 12.5%;
+
+/* white */
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* Frame 128 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 7px 8px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 32px;
+left: 12px;
+top: 144px;
+
+
+
+/* download_FILL0_wght400_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 150px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Software Download */
+
+width: 127px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* view-details-arrow */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 126.06%;
+right: -38.83%;
+top: 25%;
+bottom: 0%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 134.57%;
+right: -37.23%;
+top: 59.38%;
+bottom: 12.5%;
+
+/* white */
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* Frame 258 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 11.5px 8px 11.5px 12px;
+gap: 10px;
+
+position: absolute;
+width: 200px;
+height: 24px;
+left: 0px;
+top: 56.34px;
+
+
+
+/* Line */
+
+width: 180px;
+height: 1px;
+
+background: #2D3E4E;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Panel */
+
+position: absolute;
+width: 200px;
+height: 1055px;
+left: 0px;
+top: 0px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* bg/subpanel */
+background: #242C35;
+border: 1px solid #283038;
+
+
+/* Frame 124 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 174.16px;
+height: 32px;
+left: 13px;
+top: 14px;
+
+
+
+/* Group 120 */
+
+width: 27.16px;
+height: 27.58px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Union */
+
+position: absolute;
+width: 27.16px;
+height: 27.58px;
+left: 0px;
+top: 2.21px;
+
+background: #0098C5;
+
+
+/* Vector */
+
+position: absolute;
+left: 3.73%;
+right: 84.4%;
+top: 27.54%;
+bottom: 6.91%;
+
+background: #0070A4;
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 88.16%;
+top: 6.91%;
+bottom: 27.66%;
+
+background: #0098C5;
+
+
+/* Rectangle 170 */
+
+position: absolute;
+width: 9px;
+height: 9px;
+left: 9px;
+top: 11.5px;
+
+background: #114E85;
+border-radius: 3px;
+
+
+/* [Cluster Name] */
+
+width: 139px;
+height: 32px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 21px;
+line-height: 32px;
+/* identical to box height, or 152% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Group 126 */
+
+position: absolute;
+width: 180px;
+height: 56px;
+left: 12px;
+top: 974px;
+
+
+
+/* Frame 259 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 180px;
+height: 18px;
+left: 12px;
+top: 1012px;
+
+
+
+/* Frame 8 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 8px;
+gap: 4px;
+
+width: 180px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* AD */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 16 */
+
+position: absolute;
+width: 14px;
+height: 14px;
+left: 2px;
+top: 2px;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* S */
+
+position: absolute;
+width: 8px;
+height: 16px;
+left: 5px;
+top: 1px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #242C35;
+
+
+
+/* AD\user */
+
+width: 120px;
+height: 18px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* arrow_drop_down_FILL0_wght600_GRAD0_opsz48 1 */
+
+width: 18px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 32.66%;
+right: 32.56%;
+top: 40.73%;
+bottom: 37.81%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Horizontal Rule */
+
+position: absolute;
+width: 180px;
+height: 32px;
+left: 12px;
+top: 974px;
+
+
+
+/* margin-bottom */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 20px;
+
+
+
+/* margin-top */
+
+position: absolute;
+height: 20px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+
+
+/* Line */
+
+position: absolute;
+height: 1px;
+left: 0%;
+right: 0%;
+top: 16px;
+
+background: #2D3E4E;
+
+
+/* Frame 270 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 12.5px 8px 11.5px 12px;
+gap: 10px;
+
+position: absolute;
+width: 200px;
+height: 25px;
+left: 0px;
+top: 40.34px;
+
+
+
+/* Line */
+
+width: 180px;
+height: 1px;
+
+background: #2D3E4E;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 168 */
+
+position: absolute;
+width: 2px;
+height: 24px;
+left: 199px;
+top: 98px;
+
+/* Agave/Regular */
+background: #00A3CA;
+
+
+/* Frame 271 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+position: absolute;
+width: 188px;
+height: 52px;
+left: 12px;
+top: 70px;
+
+
+
+/* Frame 192 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 0px 0px 8px;
+gap: 8px;
+
+width: 188px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Ellipse 6 */
+
+width: 4px;
+height: 4px;
+
+/* white */
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Performance Metrics */
+
+width: 168px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame 19 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 0px 0px 8px;
+gap: 8px;
+
+width: 187px;
+height: 24px;
+
+background: #13181E;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Ellipse 6 */
+
+width: 4px;
+height: 4px;
+
+/* white */
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Edit Snapshot Policy */
+
+width: 167px;
+height: 24px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Group 119 */
+
+position: absolute;
+width: 4px;
+height: 4px;
+left: 359px;
+top: 271px;
+
+
+
+/* Oval */
+
+position: absolute;
+width: 4px;
+height: 4px;
+left: 359px;
+top: 271px;
+
+/* Ink/Regular */
+background: #424B53;
+
+
+/* Panel */
+
+position: absolute;
+width: 1171px;
+height: 1052px;
+left: 205px;
+top: 3px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #1B222B;
+border: 1px solid #283038;
+
+
+/* Edit Snapshot Policy */
+
+position: absolute;
+width: 189px;
+height: 32px;
+left: 17px;
+top: 12px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 21px;
+line-height: 32px;
+/* identical to box height, or 152% */
+display: flex;
+align-items: flex-end;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+
+/* Group 125 */
+
+position: absolute;
+width: 1212px;
+height: 757px;
+left: 222px;
+top: 65px;
+
+
+
+/* Heading 2 */
+
+position: absolute;
+width: 400px;
+height: 48px;
+left: 237px;
+top: 439px;
+
+
+
+/* Heading 2 */
+
+position: absolute;
+visibility: hidden;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 43.75%;
+
+/* H3 */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 26px;
+/* identical to box height, or 110% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Policy Name */
+
+position: absolute;
+width: 100px;
+height: 26px;
+left: 222px;
+top: 65px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Apply to Directory */
+
+position: absolute;
+width: 147px;
+height: 26px;
+left: 222px;
+top: 147px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Run Policy on the Following Schedule */
+
+position: absolute;
+width: 302px;
+height: 26px;
+left: 222px;
+top: 228px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 1211px;
+height: 304px;
+left: 223px;
+top: 260px;
+
+
+
+/* Content Subpanel */
+
+position: absolute;
+width: 1211px;
+height: 304px;
+left: 223px;
+top: 260px;
+
+
+
+/* bg */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0.4%;
+bottom: 0%;
+
+/* bg/subpanel */
+background: #242C35;
+
+
+/* border-top */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 99.56%;
+
+/* border/content-medium */
+background: rgba(61, 69, 77, 0.8);
+
+
+/* Select Schedule Type */
+
+position: absolute;
+width: 244px;
+height: 26px;
+left: 246px;
+top: 297px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+text-align: right;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Set to Time Zone */
+
+position: absolute;
+width: 244px;
+height: 26px;
+left: 246px;
+top: 347px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+text-align: right;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* America/Los Angeles */
+
+position: absolute;
+width: 244px;
+height: 26px;
+left: 514px;
+top: 347px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* : */
+
+position: absolute;
+width: 13px;
+height: 26px;
+left: 567px;
+top: 397px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Take a Snapshot at */
+
+position: absolute;
+width: 244px;
+height: 26px;
+left: 246px;
+top: 397px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+text-align: right;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* On the Following Day(s) */
+
+position: absolute;
+width: 244px;
+height: 26px;
+left: 246px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+text-align: right;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Delete Each Snapshot */
+
+position: absolute;
+width: 244px;
+height: 26px;
+left: 246px;
+top: 497px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+text-align: right;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Select */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 8px;
+gap: 8px;
+
+position: absolute;
+width: 229px;
+height: 36px;
+left: 514px;
+top: 293px;
+
+background: rgba(66, 75, 83, 0.4);
+border: 1px solid #424B53;
+border-radius: 5px;
+
+
+/* text */
+
+width: 189px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* view-details-arrow */
+
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: center;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 89.52%;
+right: 3.49%;
+top: 27.78%;
+bottom: 27.78%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 95.55%;
+right: 1.71%;
+top: 41.29%;
+bottom: 29.08%;
+
+/* Cloud/Regular */
+background: #C7CACC;
+transform: rotate(90deg);
+
+
+/* Select */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 8px;
+gap: 8px;
+
+position: absolute;
+width: 97px;
+height: 36px;
+left: 846px;
+top: 491px;
+
+background: rgba(66, 75, 83, 0.4);
+border: 1px solid #424B53;
+border-radius: 5px;
+
+
+/* text */
+
+width: 57px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* view-details-arrow */
+
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: center;
+flex-grow: 0;
+
+
+/* Path */
+
+position: absolute;
+left: 75.26%;
+right: 8.25%;
+top: 27.78%;
+bottom: 27.78%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 89.49%;
+right: 4.04%;
+top: 41.29%;
+bottom: 29.08%;
+
+/* Cloud/Regular */
+background: #C7CACC;
+transform: rotate(90deg);
+
+
+/* (Deprecated) text field */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 9px;
+gap: 8px;
+
+position: absolute;
+width: 46px;
+height: 36px;
+left: 514px;
+top: 393px;
+
+background: rgba(66, 75, 83, 0.5);
+border: 1px solid #424B53;
+border-radius: 5px;
+
+
+/* text */
+
+width: 28px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* (Deprecated) text field */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 9px;
+gap: 8px;
+
+position: absolute;
+width: 46px;
+height: 36px;
+left: 579px;
+top: 393px;
+
+background: rgba(66, 75, 83, 0.5);
+border: 1px solid #424B53;
+border-radius: 5px;
+
+
+/* text */
+
+width: 28px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* (Deprecated) text field */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 9px;
+gap: 8px;
+
+position: absolute;
+width: 41px;
+height: 36px;
+left: 798px;
+top: 491px;
+
+background: rgba(66, 75, 83, 0.5);
+border: 1px solid #424B53;
+border-radius: 5px;
+
+
+/* text */
+
+width: 23px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Group 10 */
+
+position: absolute;
+width: 105px;
+height: 26px;
+left: 514px;
+top: 447px;
+
+
+
+/* Every day */
+
+position: absolute;
+width: 81px;
+height: 26px;
+left: 538px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 514px;
+top: 452px;
+
+
+
+/* Container */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+/* Blueberry/Regular */
+border: 1px solid #007ACC;
+border-radius: 2px;
+
+
+/* Group 11 */
+
+position: absolute;
+width: 74px;
+height: 26px;
+left: 514px;
+top: 497px;
+
+
+
+/* Never */
+
+position: absolute;
+width: 50px;
+height: 26px;
+left: 538px;
+top: 497px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Radio */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 514px;
+top: 502px;
+
+
+
+/* Container */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+/* Blueberry/Regular */
+border: 1px solid #007ACC;
+border-radius: 8px;
+
+
+/* Group 9 */
+
+position: absolute;
+width: 60px;
+height: 26px;
+left: 643px;
+top: 447px;
+
+
+
+/* Mon */
+
+position: absolute;
+width: 36px;
+height: 26px;
+left: 667px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 643px;
+top: 452px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 2px;
+
+
+/* Vector 1 */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+border: 2px solid #F3F4F4;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+
+/* Group 12 */
+
+position: absolute;
+width: 179px;
+height: 26px;
+left: 612px;
+top: 497px;
+
+
+
+/* Automatically after */
+
+position: absolute;
+width: 155px;
+height: 26px;
+left: 636px;
+top: 497px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Radio */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 612px;
+top: 502px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 8px;
+
+
+/* Selection */
+
+position: absolute;
+left: 31.25%;
+right: 31.25%;
+top: 31.25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+
+
+/* Group 8 */
+
+position: absolute;
+width: 54px;
+height: 26px;
+left: 727px;
+top: 447px;
+
+
+
+/* Tue */
+
+position: absolute;
+width: 30px;
+height: 26px;
+left: 751px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 727px;
+top: 452px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 2px;
+
+
+/* Vector 1 */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+border: 2px solid #F3F4F4;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+
+/* Group 7 */
+
+position: absolute;
+width: 63px;
+height: 26px;
+left: 805px;
+top: 446px;
+
+
+
+/* Wed */
+
+position: absolute;
+width: 39px;
+height: 26px;
+left: 829px;
+top: 446px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 805px;
+top: 451px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 2px;
+
+
+/* Vector 1 */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+border: 2px solid #F3F4F4;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+
+/* Group 6 */
+
+position: absolute;
+width: 62px;
+height: 26px;
+left: 892px;
+top: 447px;
+
+
+
+/* Thur */
+
+position: absolute;
+width: 38px;
+height: 26px;
+left: 916px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 892px;
+top: 452px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 2px;
+
+
+/* Vector 1 */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+border: 2px solid #F3F4F4;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+
+/* Group 5 */
+
+position: absolute;
+width: 45px;
+height: 26px;
+left: 978px;
+top: 447px;
+
+
+
+/* Fri */
+
+position: absolute;
+width: 21px;
+height: 26px;
+left: 1002px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 978px;
+top: 452px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 2px;
+
+
+/* Vector 1 */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+border: 2px solid #F3F4F4;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+
+/* Group 4 */
+
+position: absolute;
+width: 51px;
+height: 26px;
+left: 1047px;
+top: 447px;
+
+
+
+/* Sat */
+
+position: absolute;
+width: 27px;
+height: 26px;
+left: 1071px;
+top: 447px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 1047px;
+top: 452px;
+
+
+
+/* Container */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+/* Blueberry/Regular */
+border: 1px solid #007ACC;
+border-radius: 2px;
+
+
+/* Group 3 */
+
+position: absolute;
+width: 57px;
+height: 26px;
+left: 1122px;
+top: 446px;
+
+
+
+/* Sun */
+
+position: absolute;
+width: 33px;
+height: 26px;
+left: 1146px;
+top: 446px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 1122px;
+top: 451px;
+
+
+
+/* Container */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+/* Blueberry/Regular */
+border: 1px solid #007ACC;
+border-radius: 2px;
+
+
+/* (Deprecated) text field */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 9px;
+gap: 8px;
+
+position: absolute;
+width: 793px;
+height: 36px;
+left: 222px;
+top: 98px;
+
+background: rgba(66, 75, 83, 0.5);
+border: 1px solid #424B53;
+border-radius: 5px;
+
+
+/* text */
+
+width: 775px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* (Deprecated) text field */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 9px;
+gap: 8px;
+
+position: absolute;
+width: 752px;
+height: 36px;
+left: 263px;
+top: 182px;
+
+background: rgba(66, 75, 83, 0.5);
+border: 1px solid #424B53;
+border-radius: 0px 5px 5px 0px;
+
+
+/* text */
+
+width: 734px;
+height: 24px;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Tooltip Icon */
+
+position: absolute;
+width: 18px;
+height: 18px;
+left: 695px;
+top: 351px;
+
+
+
+/* help_black_24dp 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* Blueberry/Lighter */
+background: #0298FF;
+
+
+/* text field/textfield prefix */
+
+position: absolute;
+width: 40px;
+height: 36px;
+left: 223px;
+top: 182px;
+
+
+
+/* Rectangle 9 */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* bg/content */
+background: #1B222C;
+border: 1px solid #424B53;
+border-radius: 5px 0px 0px 5px;
+
+
+/* / */
+
+position: absolute;
+left: 42.5%;
+right: 42.5%;
+top: 16.67%;
+bottom: 16.67%;
+
+/* Forms/Text Input */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Cloud/Pale */
+color: #F3F4F4;
+
+
+
+/* Enable policy */
+
+position: absolute;
+width: 106px;
+height: 26px;
+left: 250px;
+top: 733px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Enable locked snapshots */
+
+position: absolute;
+width: 198px;
+height: 26px;
+left: 250px;
+top: 665px;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 224px;
+top: 738px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Blueberry/Regular */
+background: #007ACC;
+border-radius: 2px;
+
+
+/* Vector 1 */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 25%;
+bottom: 31.25%;
+
+/* Cloud/Pale */
+border: 2px solid #F3F4F4;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+
+/* Group 13 */
+
+position: absolute;
+width: 226px;
+height: 36px;
+left: 222px;
+top: 786px;
+
+
+
+/* Buttons */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 16px;
+gap: 10px;
+
+position: absolute;
+width: 125px;
+height: 36px;
+left: 222px;
+top: 786px;
+
+/* Blueberry/Regular */
+background: #007ACC;
+/* Bezel/Upper */
+box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+border-radius: 4px;
+
+
+/* label */
+
+width: 93px;
+height: 24px;
+
+/* Forms/Button Text */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* white */
+color: #FFFFFF;
+
+/* Controls/Text */
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Buttons */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 16px;
+gap: 10px;
+
+position: absolute;
+width: 87px;
+height: 36px;
+left: 361px;
+top: 786px;
+
+border-radius: 4px;
+
+
+/* label */
+
+width: 55px;
+height: 24px;
+
+/* Forms/Button Text */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Blueberry/Lighter */
+color: #0298FF;
+
+/* Controls/Text */
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Checkbox */
+
+position: absolute;
+width: 16px;
+height: 16px;
+left: 224px;
+top: 670px;
+
+
+
+/* Container */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Cloud/Pale */
+background: #F3F4F4;
+/* Blueberry/Regular */
+border: 1px solid #007ACC;
+border-radius: 2px;
+
+
+/* Locked snapshots cannot be deleted before the deletion schedule expires. For this feature to be available, snapshots must be set to automatically delete. */
+
+position: absolute;
+width: 1085px;
+height: 23px;
+left: 226px;
+top: 636px;
+
+/* Forms/Helper Text */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+/* identical to box height, or 142% */
+
+/* Cloud/Darker */
+color: #A6AAAE;
+
+
+
+/* Component 3 */
+
+position: absolute;
+width: 231px;
+height: 26px;
+left: 225px;
+top: 607px;
+
+
+
+/* Snapshot Naming Format */
+
+position: absolute;
+left: 0%;
+right: 37.66%;
+top: 0%;
+bottom: 0%;
+
+/* Body */
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height, or 143% */
+
+/* Cloud/Regular */
+color: #C7CACC;
+
+
+
+/* Tooltip Icon */
+
+position: absolute;
+visibility: hidden;
+left: 92.21%;
+right: 0%;
+top: 11.54%;
+bottom: 19.23%;
+
