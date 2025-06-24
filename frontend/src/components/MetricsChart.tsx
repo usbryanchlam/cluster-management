@@ -24,32 +24,173 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
     write: number
   } | null>(null)
 
-  // Transform the data for Recharts with smart date labeling
-  const chartData = data.data.timestamps.map((timestamp, index) => {
-    const date = new Date(timestamp)
+  // Calculate dynamic Y-axis domain based on actual data values
+  const calculateYAxisDomain = () => {
+    const readValues = type === 'iops' ? data.data.iops.read : data.data.throughput.read
+    const writeValues = type === 'iops' ? data.data.iops.write : data.data.throughput.write
+    const allValues = [...readValues, ...writeValues]
 
-    // For multi-day data, show date labels at key points
-    let shouldShowDate = false
-    if (index === 0) {
-      // Always show the first point
-      shouldShowDate = true
-    } else if (index === data.data.timestamps.length - 1) {
-      // Always show the last point
-      shouldShowDate = true
-    } else if (date.getHours() === 0) {
-      // Show date at midnight (start of new day)
-      shouldShowDate = true
+    const maxValue = Math.max(...allValues)
+
+    // Add 10% padding to the max value for better visualization
+    const paddedMax = maxValue * 1.1
+
+    // Round up to the nearest clean multiple for better scale readability
+    const roundUpToCleanMultiple = (value: number): number => {
+      if (value <= 0) return 0
+
+      // Find the order of magnitude
+      const orderOfMagnitude = Math.pow(10, Math.floor(Math.log10(value)))
+
+      // Determine the base multiplier (1, 2, 5, or 10)
+      const normalizedValue = value / orderOfMagnitude
+
+      let multiplier: number
+      if (normalizedValue <= 1) {
+        multiplier = 1
+        // } else if (normalizedValue <= 2) {
+        //   multiplier = 2
+      } else if (normalizedValue <= 5) {
+        multiplier = 5
+      } else {
+        multiplier = 10
+      }
+
+      return multiplier * orderOfMagnitude
     }
 
+    const cleanMax = roundUpToCleanMultiple(paddedMax)
+
+    // Minimum Y-axis label should always be 0
+    return [0, cleanMax]
+  }
+
+  // Generate X-axis labels based on time range
+  const generateXAxisLabels = () => {
+    const timeRange = data.timeRange
+    const timestamps = data.data.timestamps
+
+    switch (timeRange) {
+      case '1h': {
+        // Every 15 minutes, format "hh:mm"
+        const labels: Array<{ index: number, label: string }> = []
+        timestamps.forEach((timestamp, index) => {
+          const date = new Date(timestamp)
+          const minutes = date.getUTCMinutes()
+          // Show labels every 15 minutes (0, 15, 30, 45)
+          if (minutes % 15 === 0) {
+            const hours = date.getUTCHours().toString().padStart(2, '0')
+            const mins = date.getUTCMinutes().toString().padStart(2, '0')
+            labels.push({ index, label: `${hours}:${mins}` })
+          }
+        })
+        return labels
+      }
+
+      case '6h': {
+        // Every 1 hour, format "hh"
+        const labels: Array<{ index: number, label: string }> = []
+        timestamps.forEach((timestamp, index) => {
+          const date = new Date(timestamp)
+          const minutes = date.getUTCMinutes()
+          // Show labels every hour (at :00)
+          if (minutes === 0) {
+            const hours = date.getUTCHours().toString()
+            labels.push({ index, label: hours })
+          }
+        })
+        return labels
+      }
+
+      case '24h': {
+        // Every 4 hours, format "hh"
+        const labels: Array<{ index: number, label: string }> = []
+        timestamps.forEach((timestamp, index) => {
+          const date = new Date(timestamp)
+          const hours = date.getUTCHours()
+          const minutes = date.getUTCMinutes()
+          // Show labels every 4 hours (0, 4, 8, 12, 16, 20) at :00
+          if (hours % 4 === 0 && minutes === 0) {
+            labels.push({ index, label: hours.toString() })
+          }
+        })
+        return labels
+      }
+
+      case '7d': {
+        // Every 1 day, format "Mmm D"
+        const labels: Array<{ index: number, label: string }> = []
+        const seenDates = new Set<string>()
+        timestamps.forEach((timestamp, index) => {
+          const date = new Date(timestamp)
+          const dateKey = `${date.getUTCFullYear()}-${date.getUTCMonth()}-${date.getUTCDate()}`
+          // Show one label per day
+          if (!seenDates.has(dateKey)) {
+            seenDates.add(dateKey)
+            const month = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
+            const day = date.getUTCDate()
+            labels.push({ index, label: `${month} ${day}` })
+          }
+        })
+        return labels
+      }
+
+      case '30d': {
+        // Every 7 days, format "Mmm D"
+        const labels: Array<{ index: number, label: string }> = []
+        const seenDates = new Set<string>()
+
+        timestamps.forEach((timestamp, index) => {
+          const date = new Date(timestamp)
+          const dayOfWeek = date.getUTCDay()
+          const dateKey = `${date.getUTCFullYear()}-${date.getUTCMonth()}-${date.getUTCDate()}`
+
+          // Show labels every 7 days (on Sundays, day 0) but only once per date
+          if ((dayOfWeek === 0 || index === 0 || index === timestamps.length - 1) && !seenDates.has(dateKey)) {
+            seenDates.add(dateKey)
+            const month = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
+            const day = date.getUTCDate()
+            labels.push({ index, label: `${month} ${day}` })
+          }
+        })
+        return labels
+      }
+
+      case '90d': {
+        // Every 1 month, format "Mmm"
+        const labels: Array<{ index: number, label: string }> = []
+        const seenMonths = new Set<number>()
+        timestamps.forEach((timestamp, index) => {
+          const date = new Date(timestamp)
+          const month = date.getUTCMonth()
+          // Show one label per month
+          if (!seenMonths.has(month)) {
+            seenMonths.add(month)
+            const monthName = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
+            labels.push({ index, label: monthName })
+          }
+        })
+        return labels
+      }
+
+      default:
+        return []
+    }
+  }
+
+  // Transform the data for Recharts with dynamic axis labeling
+  const xAxisLabels = generateXAxisLabels()
+  const yAxisDomain = calculateYAxisDomain()
+
+  const chartData = data.data.timestamps.map((timestamp, index) => {
     const readValue = type === 'iops' ? data.data.iops.read[index] : data.data.throughput.read[index]
     const writeValue = type === 'iops' ? data.data.iops.write[index] : data.data.throughput.write[index]
 
+    // Find if this index should have a label
+    const labelInfo = xAxisLabels.find(l => l.index === index)
+
     return {
-      time: shouldShowDate ? date.toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        timeZone: 'UTC'
-      }) : '',
+      time: labelInfo ? labelInfo.label : '',
       fullTime: timestamp,
       originalIndex: index,
       read: readValue,
@@ -58,15 +199,14 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
   })
 
   const title = type === 'iops' ? 'IOPS' : 'Throughput'
-  const yAxisMax = type === 'iops' ? 100000 : 2000 // 100k for IOPS, 2GB/s for throughput
 
   const formatYAxisLabel = (value: number) => {
     if (type === 'iops') {
       if (value >= 1000) return `${(value / 1000).toFixed(0)}k`
-      return value.toString()
+      return Math.round(value).toString()
     } else {
       if (value >= 1000) return `${(value / 1000).toFixed(0)} GB/s`
-      return `${value} GB/s`
+      return `${Math.round(value)} KB/s`
     }
   }
 
@@ -143,19 +283,20 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
   }
 
   // Get latest values for the side panel
-  const latestIndex = data.data.timestamps.length - 1
-  const latestRead = type === 'iops' ? data.data.iops.read[latestIndex] : data.data.throughput.read[latestIndex]
-  const latestWrite = type === 'iops' ? data.data.iops.write[latestIndex] : data.data.throughput.write[latestIndex]
+  // const latestIndex = data.data.timestamps.length - 1
+  // const latestRead = type === 'iops' ? data.data.iops.read[latestIndex] : data.data.throughput.read[latestIndex]
+  // const latestWrite = type === 'iops' ? data.data.iops.write[latestIndex] : data.data.throughput.write[latestIndex]
 
   return (
-    <div style={{ 
-      backgroundColor: '#1B222C', 
-      borderRadius: '4px'
-    }} className="p-6 flex font-nunito">
+    <div style={{
+      backgroundColor: '#1B222C',
+      borderRadius: '4px',
+      height: 'calc(40vh - 24px)' // Half viewport height minus some margin for two charts
+    }} className="p-6 font-nunito">
       {/* Chart Section */}
-      <div className="flex-1">
+      <div className="w-full h-full flex flex-col">
         <div className="flex items-center justify-between mb-6">
-          <h3 style={{ 
+          <h3 style={{
             fontSize: '18px',
             fontWeight: 400,
             color: '#C7CACC',
@@ -172,7 +313,7 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
           )}
         </div>
 
-        <div className="h-64 relative">
+        <div className="flex-1 relative min-h-0">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={chartData}
@@ -205,7 +346,7 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
                 tickLine={false}
                 tick={{ fontSize: 12, fill: '#A6AAAE' }}
                 tickFormatter={formatYAxisLabel}
-                domain={[0, yAxisMax]}
+                domain={yAxisDomain}
               />
               <Tooltip
                 content={({ active, payload }) => {
@@ -297,13 +438,14 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         </div>
       </div>
 
-      {/* Values Panel */}
+      {/* Values Panel - COMMENTED OUT */}
+      {/* 
       <div style={{ 
         width: '160px',
         marginLeft: '16px'
       }} className="flex flex-col">
         {/* Legend Title */}
-        <div style={{
+      {/* <div style={{
           fontSize: '18px',
           fontWeight: 400,
           color: '#858B90',
@@ -312,7 +454,7 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         }}>{title}</div>
 
         {/* Read Legend */}
-        <div style={{
+      {/* <div style={{
           backgroundColor: 'rgba(34, 44, 54, 0.3)',
           border: '1px solid rgba(51, 59, 68, 0.5)',
           padding: '8px 12px',
@@ -336,7 +478,7 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         </div>
 
         {/* Write Legend */}
-        <div style={{
+      {/* <div style={{
           backgroundColor: 'rgba(34, 44, 54, 0.3)',
           border: '1px solid rgba(51, 59, 68, 0.5)',
           borderTop: 'none',
@@ -359,6 +501,7 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
           </div>
         </div>
       </div>
+      */}
     </div>
   )
 }
