@@ -28,6 +28,7 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
   const isLoading = isLoadingUserCluster || isLoadingPolicy
 
   const [formData, setFormData] = useState<Partial<SnapshotPolicy>>({})
+  const [showCancelDialog, setShowCancelDialog] = useState(false)
 
   useEffect(() => {
     if (policy) {
@@ -44,6 +45,19 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
       }))
     }
   }, [formData.deletion?.type, formData.locking?.enabled])
+
+  // Auto-set days to "Every day" when schedule type is "Daily"
+  useEffect(() => {
+    if (formData.schedule?.type === 'daily') {
+      setFormData(prev => ({
+        ...prev,
+        schedule: {
+          ...prev.schedule!,
+          days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+        }
+      }))
+    }
+  }, [formData.schedule?.type])
 
   const updateMutation = useMutation({
     mutationFn: (data: Omit<SnapshotPolicy, 'uuid' | 'createdAt' | 'updatedAt'>) => {
@@ -62,16 +76,16 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
     e.preventDefault()
     if (formData.name && formData.directory && formData.schedule && formData.deletion && formData.locking !== undefined) {
       // Ensure deletion has proper defaults when type is 'automatically'
-      const deletion = formData.deletion.type === 'automatically' 
+      const deletion = formData.deletion.type === 'automatically'
         ? {
-            ...formData.deletion,
-            after: formData.deletion.after || 14,
-            unit: formData.deletion.unit || 'days'
-          }
+          ...formData.deletion,
+          after: formData.deletion.after || 14,
+          unit: formData.deletion.unit || 'days'
+        }
         : {
-            type: 'manually' as const
-          }
-      
+          type: 'manually' as const
+        }
+
       // Disable locking when deletion is set to manually
       const locking = formData.deletion.type === 'manually'
         ? { enabled: false }
@@ -89,7 +103,7 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
   }
 
   const handleDayToggle = (day: string) => {
-    if (!formData.schedule) return
+    if (!formData.schedule || formData.schedule.type === 'daily') return
 
     const currentDays = formData.schedule.days || []
     const newDays = currentDays.includes(day)
@@ -106,7 +120,16 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
   }
 
   const handleCancel = () => {
+    setShowCancelDialog(true)
+  }
+
+  const confirmCancel = () => {
     setFormData(policy || {})
+    setShowCancelDialog(false)
+  }
+
+  const cancelDialog = () => {
+    setShowCancelDialog(false)
   }
 
   if (isLoading) {
@@ -128,7 +151,7 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
     <div className="flex-1 bg-main-bg p-4 overflow-y-auto">
       <div className="max-w-4xl">
         <h1 className="text-lg text-slate-300 mb-4">
-          Edit Snapshot Policy{userCluster ? ` - ${userCluster.cluster.cluster_name}` : ''}
+          Edit Snapshot Policy
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-1">
@@ -172,13 +195,20 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
                 <label className="text-slate-300 text-right text-sm">Select Schedule Type</label>
                 <select
                   value={formData.schedule?.type || 'daily'}
-                  onChange={(e) => setFormData({
-                    ...formData,
-                    schedule: {
-                      ...formData.schedule!,
-                      type: e.target.value as 'daily' | 'weekly',
-                    },
-                  })}
+                  onChange={(e) => {
+                    const scheduleType = e.target.value as 'daily' | 'weekly'
+                    setFormData({
+                      ...formData,
+                      schedule: {
+                        ...formData.schedule!,
+                        type: scheduleType,
+                        // Auto-set to "Every day" when switching to Daily
+                        days: scheduleType === 'daily' 
+                          ? ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+                          : formData.schedule?.days || ['mon', 'tue', 'wed', 'thu', 'fri']
+                      },
+                    })
+                  }}
                   className="w-64 px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="daily">Daily</option>
@@ -191,7 +221,7 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
                 <label className="text-slate-300 text-right text-sm">Set to Time Zone</label>
                 <div className="flex items-center space-x-2">
                   <span className="text-slate-300 text-sm">America/Los Angeles</span>
-                  <div 
+                  <div
                     className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center cursor-help"
                     title="Same as the time zone setting of the cluster"
                   >
@@ -269,9 +299,10 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
                           })
                         }
                       }}
-                      className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 rounded focus:ring-blue-500"
+                      disabled={formData.schedule?.type === 'daily'}
+                      className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 rounded focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
-                    <span className="text-slate-300 text-sm">Every day</span>
+                    <span className={`text-sm ${formData.schedule?.type === 'daily' ? 'text-slate-500' : 'text-slate-300'}`}>Every day</span>
                   </label>
 
                   {[
@@ -288,9 +319,10 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
                         type="checkbox"
                         checked={formData.schedule?.days?.includes(day.value) ?? (day.value !== 'sat' && day.value !== 'sun')}
                         onChange={() => handleDayToggle(day.value)}
-                        className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 rounded focus:ring-blue-500"
+                        disabled={formData.schedule?.type === 'daily'}
+                        className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 rounded focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                       />
-                      <span className="text-slate-300 text-sm">{day.label}</span>
+                      <span className={`text-sm ${formData.schedule?.type === 'daily' ? 'text-slate-500' : 'text-slate-300'}`}>{day.label}</span>
                     </label>
                   ))}
                 </div>
@@ -339,7 +371,7 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
                       disabled={formData.deletion?.type === 'manually'}
                       className="w-16 px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white text-center focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
-                    <select 
+                    <select
                       value={formData.deletion?.unit || 'days'}
                       onChange={(e) => setFormData({
                         ...formData,
@@ -424,6 +456,32 @@ export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps
             </div>
           )}
         </form>
+
+        {/* Cancel Confirmation Dialog */}
+        {showCancelDialog && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-slate-800 border border-slate-600 rounded-lg p-6 max-w-md w-full mx-4">
+              <h3 className="text-lg font-medium text-white mb-4">Confirm Cancel</h3>
+              <p className="text-slate-300 text-sm mb-6">
+                Are you sure you want to discard your changes and reload the previously saved data?
+              </p>
+              <div className="flex space-x-4 justify-end">
+                <button
+                  onClick={cancelDialog}
+                  className="px-4 py-2 text-sm text-slate-300 hover:text-white focus:outline-none"
+                >
+                  Keep Editing
+                </button>
+                <button
+                  onClick={confirmCancel}
+                  className="px-4 py-2 text-sm bg-red-600 hover:bg-red-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                >
+                  Discard Changes
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
