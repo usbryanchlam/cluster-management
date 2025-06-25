@@ -7,8 +7,8 @@ import { MetricsDashboard } from '@/components/MetricsDashboard'
 import { SnapshotPolicyForm } from '@/components/SnapshotPolicyForm'
 import { userClusterApi } from '@/lib/api'
 
-// Demo cluster ID - in a real app, this would come from routing or selection
-const DEMO_CLUSTER_ID = 'demo-cluster-123'
+// Default cluster ID - Bryan's cluster UUID as fallback
+const DEFAULT_CLUSTER_ID = 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c'
 
 export default function HomePage() {
   const [activeView, setActiveView] = useState<'metrics' | 'policy'>('metrics')
@@ -46,7 +46,7 @@ export default function HomePage() {
       />
       
       {activeView === 'metrics' ? (
-        <MetricsDashboard clusterId={userCluster?.cluster.uuid || DEMO_CLUSTER_ID} />
+        <MetricsDashboard clusterId={userCluster?.cluster.uuid || DEFAULT_CLUSTER_ID} />
       ) : (
         <SnapshotPolicyForm userId={currentUserId} />
       )}
