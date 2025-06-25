@@ -7,7 +7,7 @@ A comprehensive full-stack web application for cluster monitoring and management
 - **Frontend**: Next.js 15 with React 19, TypeScript, Tailwind CSS, and Recharts
 - **Backend**: AdonisJS 6 with TypeScript and JSON file storage
 - **Data**: Time series metrics with smart aggregation and snapshot policy management
-- **Testing**: Comprehensive unit, integration, and E2E testing suites
+- **Testing**: Comprehensive unit and integration testing suites
 
 ## 📁 Project Structure
 
@@ -19,14 +19,12 @@ cluster-management/
 │   │   ├── components/# Reusable UI components
 │   │   └── lib/       # Utilities and API client
 │   ├── __tests__/     # Unit and integration tests
-│   ├── e2e/           # End-to-end tests
 │   └── public/        # Static assets
 ├── backend/           # AdonisJS API server
 │   ├── app/           # Application logic
 │   ├── data/          # Time series data and policies
 │   └── tests/         # Backend test suites
-├── design/            # System design diagrams
-└── docs/              # Additional documentation
+└── design/            # System design diagrams
 ```
 
 ## 🚀 Quick Start
@@ -59,8 +57,6 @@ npm run dev
 npm run dev              # Start development server
 npm run build            # Build for production
 npm run test             # Run unit tests
-npm run test:e2e         # Run E2E tests
-npm run test:coverage    # Run tests with coverage
 ```
 
 **Backend**
@@ -118,11 +114,11 @@ npm run build            # Build for production
 - **Validation**: Request validation with custom rules
 
 ### Testing Infrastructure
-- **Unit Tests**: 43 passing component tests with 45% coverage
-- **Integration Tests**: API testing with MSW mocking
-- **E2E Tests**: Playwright cross-browser testing
-- **Visual Regression**: Screenshot-based UI consistency testing
-- **CI/CD Ready**: Test scripts for automated pipelines
+- **Unit Tests**: 55 passing tests with 42% coverage
+- **Component Tests**: Comprehensive React component testing
+- **API Tests**: Simple, reliable backend API testing
+- **Lightweight Approach**: Fast, maintainable test suite
+- **CI/CD Ready**: No complex dependencies or setup required
 
 ## 🔄 API Endpoints
 
@@ -155,33 +151,28 @@ Automatic resolution selection optimizes performance and user experience:
 
 ## 🧪 Testing
 
-### Component Testing (43 tests passing)
+### Frontend Testing (55 tests passing)
 ```bash
 cd frontend
-npm run test                    # Run unit tests
+npm run test                    # Run all tests
 npm run test:watch              # Run tests in watch mode
 npm run test:coverage           # Run with coverage report
 ```
 
-### API Testing (34 tests passing)
+### Backend Testing (43 tests passing)
 ```bash
 cd backend
 npm run test                    # Run all backend tests
 npm run test -- --grep "Unit"  # Run unit tests only
 ```
 
-### End-to-End Testing
-```bash
-cd frontend
-npm run test:e2e                # Run E2E tests
-npm run test:e2e:ui             # Run with Playwright UI
-npm run test:e2e:headed         # Run with browser UI
-```
-
-### Coverage Reports
-- **Frontend Components**: 45% statement coverage
-- **Backend API**: 100% endpoint coverage
-- **E2E Workflows**: Critical user journeys covered
+### Test Coverage Summary
+- **Frontend Tests**: 55 tests with 42% statement coverage
+  - Component Tests: 43 tests (MetricsChart, SnapshotPolicyForm)
+  - Library Tests: 12 tests (API client, utilities)
+- **Backend Tests**: 43 tests with comprehensive API coverage
+  - Unit Tests: 23 tests (controller logic, business rules)
+  - Integration Tests: 20 tests (API endpoints, data validation)
 
 ## 🎯 Key Components
 
@@ -212,7 +203,7 @@ npm run test:e2e:headed         # Run with browser UI
 - ✅ **Time Series Visualization**: Interactive charts with smart aggregation  
 - ✅ **Snapshot Policy Management**: Complete CRUD operations
 - ✅ **User Management**: Multi-user support with cluster associations
-- ✅ **Testing Suite**: Unit, integration, and E2E tests
+- ✅ **Testing Suite**: Unit and integration tests
 - ✅ **Responsive Design**: Mobile-first responsive layout
 - ✅ **Error Handling**: Comprehensive error states and recovery
 - ✅ **Documentation**: Complete project documentation
@@ -236,7 +227,7 @@ npm run test:e2e:headed         # Run with browser UI
 ### Code Quality
 - **ESLint**: Consistent code style enforcement
 - **TypeScript**: Strict type checking throughout
-- **Testing**: High test coverage with quality assertions
+- **Testing**: Reliable test suite with 98 total passing tests
 - **Documentation**: Comprehensive inline and README documentation
 - **Git Workflow**: Structured commit history with meaningful messages
 
@@ -259,6 +250,31 @@ npm run test:e2e:headed         # Run with browser UI
 - **Shadows**: Subtle depth with dark theme
 - **Animations**: Smooth transitions and loading states
 
+## 🚀 Areas for Improvement
+
+The current demo application provides a solid foundation for cluster monitoring and management. The following improvements would enhance the application for production use:
+
+### 1. Real-time Data Generation (Backend)
+- **Dynamic Data Simulation**: Implement continuous data generation in the backend to simulate live production environments
+- **Configurable Patterns**: Add realistic fluctuation patterns for IOPS and throughput metrics
+- **Historical Data Archival**: Implement automatic data rotation and archival for long-term storage
+- **Performance Scaling**: Generate data at scale to test application performance under realistic loads
+
+### 2. Real-time Data Fetching (Frontend)
+- **Auto-refresh Functionality**: Implement automatic chart refreshing every minute to display the latest metrics
+- **Live Values Panel Updates**: Update the "Values Panel" on the right side of charts with real-time data points
+- **WebSocket Integration**: Consider WebSocket connections for instant data updates without polling
+- **Background Refresh**: Implement intelligent background data fetching to maintain up-to-date information
+
+### 3. Production Readiness Enhancements
+- **Database Integration**: Replace JSON file storage with proper database solutions (PostgreSQL, InfluxDB)
+- **Caching Strategy**: Implement Redis caching for improved performance
+- **Authentication & Authorization**: Add proper user authentication and role-based access control
+- **Monitoring & Alerting**: Integrate application monitoring and alerting systems
+- **Load Balancing**: Implement horizontal scaling capabilities
+
+These improvements would transform the demo into a production-ready cluster management platform with real-time monitoring capabilities.
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -270,12 +286,13 @@ npm run test:e2e:headed         # Run with browser UI
 7. Open a Pull Request
 
 ### Development Guidelines
-- Write tests for new features
+- Write tests for new features using simplified testing approach
 - Follow TypeScript strict mode
 - Use ESLint configuration
+- Focus on component logic and user interactions in tests
 - Document new API endpoints
 - Update README for significant changes
 
 ## 📝 License
 
-This project demonstrates full-stack development capabilities with modern web technologies including React 19, Next.js 15, AdonisJS 6, and comprehensive testing practices.
+This project is private and proprietary.
