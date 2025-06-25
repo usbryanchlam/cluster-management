@@ -18,7 +18,8 @@ export interface SnapshotPolicy {
   }
   deletion: {
     type: 'automatically' | 'manually'
-    after?: number // Days after which to delete (only for automatic deletion)
+    after?: number // Number of units after which to delete (only for automatic deletion)
+    unit?: 'days' | 'weeks' // Time unit for the 'after' field
   }
   locking: {
     enabled: boolean // Prevents accidental deletion when enabled
@@ -44,6 +45,7 @@ export interface SnapshotPolicyRequest {
   deletion: {
     type: 'automatically' | 'manually'
     after?: number
+    unit?: 'days' | 'weeks'
   }
   locking: {
     enabled: boolean
@@ -91,7 +93,8 @@ export default class SnapshotPolicyController {
       },
       deletion: {
         type: 'automatically',
-        after: 14 // 2 weeks retention - balances storage cost vs recovery needs
+        after: 14, // 2 weeks retention - balances storage cost vs recovery needs
+        unit: 'days'
       },
       locking: {
         enabled: false // Start unlocked for easier initial management
