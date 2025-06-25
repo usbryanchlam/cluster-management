@@ -37,26 +37,18 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
 
     // Round up to the nearest clean multiple for better scale readability
     const roundUpToCleanMultiple = (value: number): number => {
-      if (value <= 0) return 0
-
-      // Find the order of magnitude
-      const orderOfMagnitude = Math.pow(10, Math.floor(Math.log10(value)))
-
-      // Determine the base multiplier (1, 2, 5, or 10)
-      const normalizedValue = value / orderOfMagnitude
-
-      let multiplier: number
-      if (normalizedValue <= 1) {
-        multiplier = 1
-        // } else if (normalizedValue <= 2) {
-        //   multiplier = 2
-      } else if (normalizedValue <= 5) {
-        multiplier = 5
-      } else {
-        multiplier = 10
+      if (value === 0) {
+        return 0;
       }
 
-      return multiplier * orderOfMagnitude
+      // Determine the order of magnitude of the most significant digit
+      const exponent = Math.floor(Math.log10(Math.abs(value)));
+
+      // Calculate the value of the most significant digit's place
+      const scale = Math.pow(10, exponent);
+
+      // Divide the number by the scale, round up, and then multiply back by the scale
+      return Math.ceil(value / scale) * scale;
     }
 
     const cleanMax = roundUpToCleanMultiple(paddedMax)
@@ -76,11 +68,11 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         const labels: Array<{ index: number, label: string }> = []
         timestamps.forEach((timestamp, index) => {
           const date = new Date(timestamp)
-          const minutes = date.getUTCMinutes()
+          const minutes = date.getMinutes()
           // Show labels every 15 minutes (0, 15, 30, 45)
           if (minutes % 15 === 0) {
-            const hours = date.getUTCHours().toString().padStart(2, '0')
-            const mins = date.getUTCMinutes().toString().padStart(2, '0')
+            const hours = date.getHours().toString().padStart(2, '0')
+            const mins = date.getMinutes().toString().padStart(2, '0')
             labels.push({ index, label: `${hours}:${mins}` })
           }
         })
@@ -90,13 +82,16 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
       case '6h': {
         // Every 1 hour, format "hh"
         const labels: Array<{ index: number, label: string }> = []
+        const seenHours = new Set<string>()
         timestamps.forEach((timestamp, index) => {
           const date = new Date(timestamp)
-          const minutes = date.getUTCMinutes()
-          // Show labels every hour (at :00)
-          if (minutes === 0) {
-            const hours = date.getUTCHours().toString()
-            labels.push({ index, label: hours })
+          const hours = date.getHours()
+          const hourKey = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}-${hours}`
+
+          // Show one label per hour (take the first occurrence of each hour)
+          if (!seenHours.has(hourKey)) {
+            seenHours.add(hourKey)
+            labels.push({ index, label: `${hours.toString().padStart(2, '0')}` })
           }
         })
         return labels
@@ -105,13 +100,20 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
       case '24h': {
         // Every 4 hours, format "hh"
         const labels: Array<{ index: number, label: string }> = []
+        const seenIntervals = new Set<string>()
         timestamps.forEach((timestamp, index) => {
           const date = new Date(timestamp)
-          const hours = date.getUTCHours()
-          const minutes = date.getUTCMinutes()
-          // Show labels every 4 hours (0, 4, 8, 12, 16, 20) at :00
-          if (hours % 4 === 0 && minutes === 0) {
-            labels.push({ index, label: hours.toString() })
+          const hours = date.getHours()
+
+          // Show labels every 4 hours (0, 4, 8, 12, 16, 20)
+          if (hours % 4 === 0) {
+            const intervalKey = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}-${hours}`
+
+            // Show one label per 4-hour interval (take the first occurrence)
+            if (!seenIntervals.has(intervalKey)) {
+              seenIntervals.add(intervalKey)
+              labels.push({ index, label: `${hours.toString().padStart(2, '0')}` })
+            }
           }
         })
         return labels
@@ -123,12 +125,12 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         const seenDates = new Set<string>()
         timestamps.forEach((timestamp, index) => {
           const date = new Date(timestamp)
-          const dateKey = `${date.getUTCFullYear()}-${date.getUTCMonth()}-${date.getUTCDate()}`
+          const dateKey = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
           // Show one label per day
           if (!seenDates.has(dateKey)) {
             seenDates.add(dateKey)
-            const month = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
-            const day = date.getUTCDate()
+            const month = date.toLocaleDateString('en-US', { month: 'short' })
+            const day = date.getDate()
             labels.push({ index, label: `${month} ${day}` })
           }
         })
@@ -142,14 +144,14 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
 
         timestamps.forEach((timestamp, index) => {
           const date = new Date(timestamp)
-          const dayOfWeek = date.getUTCDay()
-          const dateKey = `${date.getUTCFullYear()}-${date.getUTCMonth()}-${date.getUTCDate()}`
+          const dayOfWeek = date.getDay()
+          const dateKey = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
 
           // Show labels every 7 days (on Sundays, day 0) but only once per date
           if ((dayOfWeek === 0 || index === 0 || index === timestamps.length - 1) && !seenDates.has(dateKey)) {
             seenDates.add(dateKey)
-            const month = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
-            const day = date.getUTCDate()
+            const month = date.toLocaleDateString('en-US', { month: 'short' })
+            const day = date.getDate()
             labels.push({ index, label: `${month} ${day}` })
           }
         })
@@ -162,11 +164,11 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         const seenMonths = new Set<number>()
         timestamps.forEach((timestamp, index) => {
           const date = new Date(timestamp)
-          const month = date.getUTCMonth()
+          const month = date.getMonth()
           // Show one label per month
           if (!seenMonths.has(month)) {
             seenMonths.add(month)
-            const monthName = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
+            const monthName = date.toLocaleDateString('en-US', { month: 'short' })
             labels.push({ index, label: monthName })
           }
         })
@@ -255,19 +257,8 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
   }
 
   const formatHoverTime = (timestamp: string) => {
-    // const date = new Date(timestamp)
-    // return date.toLocaleDateString('en-US', {
-    //   weekday: 'short',
-    //   month: 'short',
-    //   day: 'numeric'
-    // }) + ', ' + date.toLocaleTimeString('en-US', {
-    //   hour: 'numeric',
-    //   minute: '2-digit',
-    //   hour12: true
-    // })
-    // Convert timestamp to Date object if it's not already
-    const isUTCString = typeof timestamp === 'string' && timestamp.endsWith('Z');
-    return formatTimestamp(timestamp, isUTCString);
+    // Convert UTC timestamp to local time for display
+    return formatTimestamp(timestamp, false);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -283,18 +274,18 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
   }
 
   // Get latest values for the side panel
-  // const latestIndex = data.data.timestamps.length - 1
-  // const latestRead = type === 'iops' ? data.data.iops.read[latestIndex] : data.data.throughput.read[latestIndex]
-  // const latestWrite = type === 'iops' ? data.data.iops.write[latestIndex] : data.data.throughput.write[latestIndex]
+  const latestIndex = data.data.timestamps.length - 1
+  const latestRead = latestIndex >= 0 ? (type === 'iops' ? data.data.iops.read[latestIndex] : data.data.throughput.read[latestIndex]) : 0
+  const latestWrite = latestIndex >= 0 ? (type === 'iops' ? data.data.iops.write[latestIndex] : data.data.throughput.write[latestIndex]) : 0
 
   return (
     <div style={{
       backgroundColor: '#1B222C',
       borderRadius: '4px',
       height: 'calc(40vh - 24px)' // Half viewport height minus some margin for two charts
-    }} className="p-6 font-nunito">
+    }} className="p-6 font-nunito flex">
       {/* Chart Section */}
-      <div className="w-full h-full flex flex-col">
+      <div className="flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-6">
           <h3 style={{
             fontSize: '18px',
@@ -438,14 +429,13 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         </div>
       </div>
 
-      {/* Values Panel - COMMENTED OUT */}
-      {/* 
-      <div style={{ 
+      {/* Values Panel */}
+      <div style={{
         width: '160px',
         marginLeft: '16px'
       }} className="flex flex-col">
         {/* Legend Title */}
-      {/* <div style={{
+        <div style={{
           fontSize: '18px',
           fontWeight: 400,
           color: '#858B90',
@@ -454,7 +444,7 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
         }}>{title}</div>
 
         {/* Read Legend */}
-      {/* <div style={{
+        <div style={{
           backgroundColor: 'rgba(34, 44, 54, 0.3)',
           border: '1px solid rgba(51, 59, 68, 0.5)',
           padding: '8px 12px',
@@ -473,12 +463,12 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
             color: '#955FD5',
             lineHeight: '20px'
           }}>
-            {formatNumber(hoveredData ? hoveredData.read : latestRead)}
+            {formatNumber(latestRead)}
           </div>
         </div>
 
         {/* Write Legend */}
-      {/* <div style={{
+        <div style={{
           backgroundColor: 'rgba(34, 44, 54, 0.3)',
           border: '1px solid rgba(51, 59, 68, 0.5)',
           borderTop: 'none',
@@ -497,11 +487,10 @@ export function MetricsChart({ data, type }: MetricsChartProps) {
             color: '#00A3CA',
             lineHeight: '20px'
           }}>
-            {formatNumber(hoveredData ? hoveredData.write : latestWrite)}
+            {formatNumber(latestWrite)}
           </div>
         </div>
       </div>
-      */}
     </div>
   )
 }
