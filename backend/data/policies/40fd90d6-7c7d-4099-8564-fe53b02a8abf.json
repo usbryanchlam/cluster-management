@@ -1,0 +1,33 @@
+{
+  "uuid": "40fd90d6-7c7d-4099-8564-fe53b02a8abf",
+  "name": "ProjectX_Daily",
+  "directory": "/Production/ProjectX",
+  "schedule": {
+    "type": "daily",
+    "timezone": "America/Los_Angeles",
+    "time": {
+      "hour": 8,
+      "minute": 0
+    },
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ]
+  },
+  "deletion": {
+    "type": "automatically",
+    "after": 14,
+    "unit": "days"
+  },
+  "locking": {
+    "enabled": false
+  },
+  "enabled": true,
+  "createdAt": "2025-06-25T06:11:05.579Z",
+  "updatedAt": "2025-06-25T17:24:12.876Z"
+}
