@@ -25,6 +25,16 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
     }
   }, [policy])
 
+  // Auto-disable locking when deletion is set to manually
+  useEffect(() => {
+    if (formData.deletion?.type === 'manually' && formData.locking?.enabled) {
+      setFormData(prev => ({
+        ...prev,
+        locking: { enabled: false }
+      }))
+    }
+  }, [formData.deletion?.type, formData.locking?.enabled])
+
   const updateMutation = useMutation({
     mutationFn: (data: Omit<SnapshotPolicy, 'uuid' | 'createdAt' | 'updatedAt'>) =>
       policyApi.updatePolicy(policyId, data),
@@ -36,12 +46,28 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (formData.name && formData.directory && formData.schedule && formData.deletion && formData.locking !== undefined) {
+      // Ensure deletion has proper defaults when type is 'automatically'
+      const deletion = formData.deletion.type === 'automatically' 
+        ? {
+            ...formData.deletion,
+            after: formData.deletion.after || 14,
+            unit: formData.deletion.unit || 'days'
+          }
+        : {
+            type: 'manually' as const
+          }
+      
+      // Disable locking when deletion is set to manually
+      const locking = formData.deletion.type === 'manually'
+        ? { enabled: false }
+        : formData.locking
+
       updateMutation.mutate({
         name: formData.name,
         directory: formData.directory,
         schedule: formData.schedule,
-        deletion: formData.deletion,
-        locking: formData.locking,
+        deletion,
+        locking,
         enabled: formData.enabled ?? true,
       })
     }
@@ -136,7 +162,7 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
                   })}
                   className="w-64 px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
                 >
-                  <option value="daily">Daily or Weekly</option>
+                  <option value="daily">Daily</option>
                   <option value="weekly">Weekly</option>
                 </select>
               </div>
@@ -146,7 +172,10 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
                 <label className="text-slate-300 text-right text-sm">Set to Time Zone</label>
                 <div className="flex items-center space-x-2">
                   <span className="text-slate-300 text-sm">America/Los Angeles</span>
-                  <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                  <div 
+                    className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center cursor-help"
+                    title="Same as the time zone setting of the cluster"
+                  >
                     <span className="text-white text-xs">?</span>
                   </div>
                 </div>
@@ -272,7 +301,7 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
                       checked={formData.deletion?.type === 'automatically'}
                       onChange={() => setFormData({
                         ...formData,
-                        deletion: { type: 'automatically', after: 14 },
+                        deletion: { type: 'automatically', after: 14, unit: 'days' },
                       })}
                       className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 focus:ring-blue-500"
                     />
@@ -288,10 +317,23 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
                           after: parseInt(e.target.value),
                         },
                       })}
-                      className="w-16 px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white text-center focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                      disabled={formData.deletion?.type === 'manually'}
+                      className="w-16 px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white text-center focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                     />
-                    <select className="px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
-                      <option>day(s)</option>
+                    <select 
+                      value={formData.deletion?.unit || 'days'}
+                      onChange={(e) => setFormData({
+                        ...formData,
+                        deletion: {
+                          ...formData.deletion!,
+                          unit: e.target.value as 'days' | 'weeks',
+                        },
+                      })}
+                      disabled={formData.deletion?.type === 'manually'}
+                      className="px-2 py-1 text-sm bg-input-bg border border-slate-600 rounded text-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <option value="days">day(s)</option>
+                      <option value="weeks">week(s)</option>
                     </select>
                   </label>
                 </div>
@@ -313,9 +355,10 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
                   ...formData,
                   locking: { enabled: e.target.checked },
                 })}
-                className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 rounded focus:ring-blue-500"
+                disabled={formData.deletion?.type === 'manually'}
+                className="w-3 h-3 text-blue-600 bg-input-bg border-slate-600 rounded focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
               />
-              <span className="text-slate-300 text-sm">Enable locked snapshots</span>
+              <span className={`text-sm ${formData.deletion?.type === 'manually' ? 'text-slate-500' : 'text-slate-300'}`}>Enable locked snapshots</span>
             </label>
           </div>
 
