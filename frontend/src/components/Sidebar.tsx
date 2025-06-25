@@ -1,7 +1,8 @@
 'use client'
 
 import React from 'react'
-import { Activity, Calendar, HardDrive, User } from 'lucide-react'
+import { Activity, Calendar, User } from 'lucide-react'
+import Image from 'next/image'
 
 interface SidebarProps {
   activeView: 'metrics' | 'policy'
@@ -11,11 +12,17 @@ interface SidebarProps {
 
 export function Sidebar({ activeView, onViewChange, clusterName = '[Cluster Name]' }: SidebarProps) {
   return (
-    <div className="w-64 bg-slate-800 text-white h-screen flex flex-col">
+    <div className="w-64 bg-sidebar-bg text-white h-screen flex flex-col">
       {/* Cluster Header */}
       <div className="p-4 border-b border-slate-700">
         <div className="flex items-center space-x-2">
-          <HardDrive className="w-5 h-5 text-cyan-400" />
+          <Image 
+            src="/logo.svg" 
+            alt="Cluster Logo" 
+            width={20} 
+            height={20}
+            className="w-5 h-5"
+          />
           <span className="text-lg font-medium">{clusterName}</span>
         </div>
       </div>
@@ -26,11 +33,10 @@ export function Sidebar({ activeView, onViewChange, clusterName = '[Cluster Name
           <li>
             <button
               onClick={() => onViewChange('metrics')}
-              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                activeView === 'metrics' 
-                  ? 'bg-slate-700 text-white' 
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700'
-              }`}
+              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${activeView === 'metrics'
+                ? 'bg-selectedfunc-bg text-white'
+                : 'text-slate-300 hover:text-white hover:bg-selectedfunc-bg'
+                }`}
             >
               <Activity className="w-4 h-4" />
               <span>Performance Metrics</span>
@@ -39,11 +45,10 @@ export function Sidebar({ activeView, onViewChange, clusterName = '[Cluster Name
           <li>
             <button
               onClick={() => onViewChange('policy')}
-              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                activeView === 'policy' 
-                  ? 'bg-slate-700 text-white' 
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700'
-              }`}
+              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${activeView === 'policy'
+                ? 'bg-selectedfunc-bg text-white'
+                : 'text-slate-300 hover:text-white hover:bg-selectedfunc-bg'
+                }`}
             >
               <Calendar className="w-4 h-4" />
               <span>Edit Snapshot Policy</span>

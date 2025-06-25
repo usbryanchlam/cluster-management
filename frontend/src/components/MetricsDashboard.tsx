@@ -31,7 +31,7 @@ export function MetricsDashboard({ clusterId }: MetricsDashboardProps) {
 
   if (error) {
     return (
-      <div className="flex-1 bg-slate-900 p-6">
+      <div className="flex-1 bg-main-bg p-6">
         <div className="text-center text-white">
           <p className="text-red-400 mb-2">Failed to load metrics</p>
           <p className="text-slate-400 text-sm">
@@ -43,7 +43,7 @@ export function MetricsDashboard({ clusterId }: MetricsDashboardProps) {
   }
 
   return (
-    <div className="flex-1 bg-slate-900 p-6">
+    <div className="flex-1 bg-main-bg p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-medium text-white">Performance Metrics</h1>

@@ -12,6 +12,17 @@
   --font-mono: var(--font-geist-mono);
   --font-nunito: var(--font-nunito);
   --font-geist-sans: var(--font-geist-sans);
+
+  /* Custom background color */
+  --color-main-bg: rgba(34, 44, 54, 0.3);
+  /* Custom side bar background color */
+  --color-sidebar-bg: rgba(36, 44, 53, 1.0);
+  /* Custom input elements background color */
+  --color-input-bg: rgba(66, 75, 83, 0.5);
+  /* Custom input elements border color */
+  --color-input-border: rgba(66, 75, 83, 1.0);
+  /* Custom selected function background color*/
+  --color-selectedfunc-bg: rgba(19, 24, 30, 1.0);
 }
 
 @media (prefers-color-scheme: dark) {
