@@ -26,7 +26,7 @@ const customJestConfig = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!src/lib/api.ts' // Exclude API client from coverage as it's tested with integration tests
+    '!src/app/**/*.{js,jsx,ts,tsx}' // Exclude Next.js app router files from coverage
   ],
   coverageReporters: ['text', 'lcov', 'html'],
   coverageDirectory: 'coverage',
