@@ -1,11 +1,6 @@
 import { test } from '@japa/runner'
-import testUtils from '@adonisjs/core/services/test_utils'
 
-test.group('Metrics API Integration Tests', (group) => {
-  group.setup(() => testUtils.httpServer().start())
-  group.teardown(async () => {
-    await testUtils.httpServer().close()
-  })
+test.group('Metrics API Integration Tests', () => {
 
   test('should return 400 without clusterId', async ({ client, assert }) => {
     const response = await client.get('/api/metrics')
@@ -16,7 +11,7 @@ test.group('Metrics API Integration Tests', (group) => {
   })
 
   test('should return valid response with clusterId', async ({ client, assert }) => {
-    const response = await client.get('/api/metrics').qs({ clusterId: 'test-cluster-123' })
+    const response = await client.get('/api/metrics').qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c' })
     
     assert.equal(response.status(), 200)
     
@@ -27,14 +22,14 @@ test.group('Metrics API Integration Tests', (group) => {
     assert.property(body, 'data')
     assert.property(body, 'metadata')
     
-    assert.equal(body.clusterId, 'test-cluster-123')
+    assert.equal(body.clusterId, 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c')
     assert.equal(body.timeRange, '24h') // Default value
   })
 
   test('should respect timeRange parameter - 1h', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-123', timeRange: '1h' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c', timeRange: '1h' })
     
     assert.equal(response.status(), 200)
     const body = response.body()
@@ -46,7 +41,7 @@ test.group('Metrics API Integration Tests', (group) => {
   test('should respect timeRange parameter - 6h', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-123', timeRange: '6h' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c', timeRange: '6h' })
     
     assert.equal(response.status(), 200)
     const body = response.body()
@@ -58,7 +53,7 @@ test.group('Metrics API Integration Tests', (group) => {
   test('should respect timeRange parameter - 24h', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-123', timeRange: '24h' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c', timeRange: '24h' })
     
     assert.equal(response.status(), 200)
     const body = response.body()
@@ -71,7 +66,7 @@ test.group('Metrics API Integration Tests', (group) => {
     const response = await client
       .get('/api/metrics')
       .qs({ 
-        clusterId: 'test-cluster-123', 
+        clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c', 
         timeRange: '24h',
         resolution: '1h'
       })
@@ -85,7 +80,7 @@ test.group('Metrics API Integration Tests', (group) => {
   test('should return valid data structure', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-123' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c' })
     
     assert.equal(response.status(), 200)
     
@@ -111,7 +106,7 @@ test.group('Metrics API Integration Tests', (group) => {
   test('should return positive metric values', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-123' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c' })
     
     assert.equal(response.status(), 200)
     
@@ -142,7 +137,7 @@ test.group('Metrics API Integration Tests', (group) => {
   test('should return chronological timestamps', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-123', timeRange: '1h' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c', timeRange: '1h' })
     
     assert.equal(response.status(), 200)
     
@@ -158,7 +153,7 @@ test.group('Metrics API Integration Tests', (group) => {
   test('should include proper metadata', async ({ client, assert }) => {
     const response = await client
       .get('/api/metrics')
-      .qs({ clusterId: 'test-cluster-456', timeRange: '6h' })
+      .qs({ clusterId: 'f2398d2e-f92d-482a-ab2d-4b9a9f79186c', timeRange: '6h' })
     
     assert.equal(response.status(), 200)
     
@@ -176,7 +171,7 @@ test.group('Metrics API Integration Tests', (group) => {
   })
 
   test('should handle different cluster IDs', async ({ client, assert }) => {
-    const clusterIds = ['cluster-1', 'cluster-abc-123', 'test-cluster-xyz']
+    const clusterIds = ['f2398d2e-f92d-482a-ab2d-4b9a9f79186c', '40fd90d6-7c7d-4099-8564-fe53b02a8abf']
     
     for (const clusterId of clusterIds) {
       const response = await client

@@ -1,5 +1,4 @@
 import { test } from '@japa/runner'
-import testUtils from '@adonisjs/core/services/test_utils'
 import fs from 'fs'
 import path from 'path'
 
@@ -7,7 +6,6 @@ test.group('Snapshot Policy API Integration Tests', (group) => {
   let testDataDir: string
 
   group.setup(() => {
-    testUtils.httpServer().start()
     // Create test data directory
     testDataDir = path.join(process.cwd(), 'data/policies-test')
     if (!fs.existsSync(testDataDir)) {
@@ -15,8 +13,7 @@ test.group('Snapshot Policy API Integration Tests', (group) => {
     }
   })
   
-  group.teardown(async () => {
-    await testUtils.httpServer().close()
+  group.teardown(() => {
     // Clean up test data
     if (fs.existsSync(testDataDir)) {
       fs.rmSync(testDataDir, { recursive: true, force: true })
