@@ -2,20 +2,30 @@
 
 import React, { useState, useEffect } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { policyApi, SnapshotPolicy } from '@/lib/api'
+import { policyApi, userClusterApi, SnapshotPolicy } from '@/lib/api'
 import { RotateCcw } from 'lucide-react'
 
 interface SnapshotPolicyFormProps {
-  policyId: string
+  userId?: string // Optional, defaults to "bryan"
 }
 
-export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
+export function SnapshotPolicyForm({ userId = "bryan" }: SnapshotPolicyFormProps) {
   const queryClient = useQueryClient()
 
-  const { data: policy, isLoading } = useQuery({
-    queryKey: ['policy', policyId],
-    queryFn: () => policyApi.getPolicy(policyId),
+  // First, get the user's associated cluster
+  const { data: userCluster, isLoading: isLoadingUserCluster } = useQuery({
+    queryKey: ['userCluster', userId],
+    queryFn: () => userClusterApi.getUserCluster(userId),
   })
+
+  // Then, get the policy for that cluster
+  const { data: policy, isLoading: isLoadingPolicy } = useQuery({
+    queryKey: ['policy', userCluster?.cluster.uuid],
+    queryFn: () => policyApi.getPolicy(userCluster!.cluster.uuid),
+    enabled: !!userCluster?.cluster.uuid, // Only run when we have cluster UUID
+  })
+
+  const isLoading = isLoadingUserCluster || isLoadingPolicy
 
   const [formData, setFormData] = useState<Partial<SnapshotPolicy>>({})
 
@@ -36,10 +46,15 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
   }, [formData.deletion?.type, formData.locking?.enabled])
 
   const updateMutation = useMutation({
-    mutationFn: (data: Omit<SnapshotPolicy, 'uuid' | 'createdAt' | 'updatedAt'>) =>
-      policyApi.updatePolicy(policyId, data),
+    mutationFn: (data: Omit<SnapshotPolicy, 'uuid' | 'createdAt' | 'updatedAt'>) => {
+      if (!userCluster?.cluster.uuid) {
+        throw new Error('No cluster UUID available')
+      }
+      return policyApi.updatePolicy(userCluster.cluster.uuid, data)
+    },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['policy', policyId] })
+      queryClient.invalidateQueries({ queryKey: ['policy', userCluster?.cluster.uuid] })
+      queryClient.invalidateQueries({ queryKey: ['userCluster', userId] })
     },
   })
 
@@ -96,11 +111,13 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
 
   if (isLoading) {
     return (
-      <div className="flex-1 bg-slate-900 p-8">
+      <div className="flex-1 bg-main-bg p-4">
         <div className="flex items-center justify-center h-64 text-white">
           <div className="text-center">
             <RotateCcw className="w-8 h-8 animate-spin text-blue-600 mx-auto mb-2" />
-            <p className="text-slate-400">Loading policy...</p>
+            <p className="text-slate-400">
+              {isLoadingUserCluster ? 'Loading user and cluster data...' : 'Loading policy...'}
+            </p>
           </div>
         </div>
       </div>
@@ -110,7 +127,9 @@ export function SnapshotPolicyForm({ policyId }: SnapshotPolicyFormProps) {
   return (
     <div className="flex-1 bg-main-bg p-4 overflow-y-auto">
       <div className="max-w-4xl">
-        <h1 className="text-lg text-slate-300 mb-4">Edit Snapshot Policy</h1>
+        <h1 className="text-lg text-slate-300 mb-4">
+          Edit Snapshot Policy{userCluster ? ` - ${userCluster.cluster.cluster_name}` : ''}
+        </h1>
 
         <form onSubmit={handleSubmit} className="space-y-1">
           {/* Policy Name */}

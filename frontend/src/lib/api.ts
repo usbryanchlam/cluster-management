@@ -52,6 +52,7 @@ export interface SnapshotPolicy {
   deletion: {
     type: 'automatically' | 'manually'
     after?: number
+    unit?: 'days' | 'weeks'
   }
   locking: {
     enabled: boolean
@@ -75,6 +76,23 @@ export const metricsApi = {
   }
 }
 
+// User and Cluster interfaces
+export interface User {
+  user_id: string
+  user_name: string
+  associated_cluster_uuid: string
+}
+
+export interface Cluster {
+  uuid: string
+  cluster_name: string
+}
+
+export interface UserClusterAssociation {
+  user: User
+  cluster: Cluster
+}
+
 export const policyApi = {
   getPolicy: async (uuid: string): Promise<SnapshotPolicy> => {
     const response = await api.get(`/api/snapshot-policy/${uuid}`)
@@ -83,6 +101,28 @@ export const policyApi = {
   
   updatePolicy: async (uuid: string, policy: Omit<SnapshotPolicy, 'uuid' | 'createdAt' | 'updatedAt'>): Promise<SnapshotPolicy> => {
     const response = await api.put(`/api/snapshot-policy/${uuid}`, policy)
+    return response.data
+  }
+}
+
+export const userClusterApi = {
+  getUser: async (userId: string): Promise<User> => {
+    const response = await api.get(`/api/user/${userId}`)
+    return response.data
+  },
+
+  getCluster: async (uuid: string): Promise<Cluster> => {
+    const response = await api.get(`/api/cluster/${uuid}`)
+    return response.data
+  },
+
+  getUserCluster: async (userId: string): Promise<UserClusterAssociation> => {
+    const response = await api.get(`/api/user/${userId}/cluster`)
+    return response.data
+  },
+
+  getAllUsersWithClusters: async (): Promise<UserClusterAssociation[]> => {
+    const response = await api.get(`/api/users-clusters`)
     return response.data
   }
 }
