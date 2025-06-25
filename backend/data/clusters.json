@@ -1,0 +1,10 @@
+[
+  {
+    "uuid": "f2398d2e-f92d-482a-ab2d-4b9a9f79186c",
+    "cluster_name": "demo-123"
+  },
+  {
+    "uuid": "40fd90d6-7c7d-4099-8564-fe53b02a8abf",
+    "cluster_name": "demo-456"
+  }
+]

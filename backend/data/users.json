@@ -1,0 +1,12 @@
+[
+  {
+    "user_id": "bryan",
+    "user_name": "Bryan",
+    "associated_cluster_uuid": "f2398d2e-f92d-482a-ab2d-4b9a9f79186c"
+  },
+  {
+    "user_id": "david",
+    "user_name": "David",
+    "associated_cluster_uuid": "40fd90d6-7c7d-4099-8564-fe53b02a8abf"
+  }
+]

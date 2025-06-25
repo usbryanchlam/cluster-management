@@ -1,4 +1,6 @@
 import type { HttpContext } from '@adonisjs/core/http'
+import fs from 'fs/promises'
+import path from 'path'
 
 // Type definitions for time series data API
 export type TimeRange = '1h' | '6h' | '24h' | '7d' | '30d' | '90d'
@@ -46,49 +48,131 @@ export default class MetricsController {
   }
 
   /**
-   * Generates realistic mock time series data for demonstration purposes.
-   * Uses mathematical functions to create believable patterns:
-   * - Sine/cosine waves for cyclical patterns (simulating daily/weekly cycles)
-   * - Random noise for realistic variance
-   * - Different base values for read vs write operations (read typically higher)
-   * - Correlated throughput based on IOPS (throughput = IOPS × average block size)
+   * Determines which aggregation level to use based on time range.
+   * Maps time ranges to appropriate JSON file types for optimal performance.
    */
-  private generateMockData(resolution: Resolution, timeRange: TimeRange): MetricsResponse['data'] {
-    const now = new Date()
-    const dataPoints = this.getDataPointCount(timeRange)
-    const intervalMs = this.getIntervalMs(resolution)
-    
-    const timestamps: string[] = []
-    const iopsRead: number[] = []
-    const iopsWrite: number[] = []
-    const throughputRead: number[] = []
-    const throughputWrite: number[] = []
+  private getAggregationLevel(timeRange: TimeRange): string {
+    switch (timeRange) {
+      case '1h':
+      case '6h':
+      case '24h':
+        return 'raw-metrics' // Use raw 1-minute data for short ranges
+      case '7d':
+      case '30d':
+        return 'hourly-aggregated' // Use hourly data for medium ranges
+      case '90d':
+        return 'daily-aggregated' // Use daily data for long ranges
+      default:
+        return 'hourly-aggregated'
+    }
+  }
 
-    // Generate data points working backwards from current time
-    for (let i = dataPoints - 1; i >= 0; i--) {
-      const timestamp = new Date(now.getTime() - (i * intervalMs))
-      timestamps.push(timestamp.toISOString())
+  /**
+   * Reads time-series data from consolidated JSON files based on cluster ID and time range.
+   * Uses optimized file structure - one file per time range for maximum performance.
+   */
+  private async readMetricsFromFiles(clusterId: string, timeRange: TimeRange): Promise<MetricsResponse['data']> {
+    const dataDir = path.join(process.cwd(), 'data', clusterId)
+    
+    // Map time ranges to consolidated file names
+    let fileName: string
+    switch (timeRange) {
+      case '1h':
+        fileName = 'raw-metrics-1h.json'
+        break
+      case '6h':
+        fileName = 'raw-metrics-6h.json'
+        break
+      case '24h':
+        fileName = 'raw-metrics-24h.json'
+        break
+      case '7d':
+        fileName = 'hourly-aggregated-7d.json'
+        break
+      case '30d':
+        fileName = 'hourly-aggregated-30d.json'
+        break
+      case '90d':
+        fileName = 'daily-aggregated-90d.json'
+        break
+      default:
+        fileName = 'raw-metrics-24h.json'
+    }
+
+    const filePath = path.join(dataDir, fileName)
+    
+    try {
+      const fileContent = await fs.readFile(filePath, 'utf-8')
+      const data = JSON.parse(fileContent)
       
-      // Create realistic patterns with mathematical functions
-      // Sin/cos create cyclical patterns, random adds realistic noise
-      const baseIopsRead = 1000 + Math.sin(i / 10) * 200 + Math.random() * 100
-      const baseIopsWrite = 600 + Math.cos(i / 8) * 150 + Math.random() * 80
-      
-      // Throughput correlates with IOPS (simulating average block sizes of 12KB read, 15KB write)
-      const baseThroughputRead = baseIopsRead * 12 + Math.random() * 1000
-      const baseThroughputWrite = baseIopsWrite * 15 + Math.random() * 800
-      
-      iopsRead.push(Math.round(baseIopsRead))
-      iopsWrite.push(Math.round(baseIopsWrite))
-      throughputRead.push(Math.round(baseThroughputRead))
-      throughputWrite.push(Math.round(baseThroughputWrite))
+      // Data is already in the expected format from consolidated files
+      return data.data
+    } catch (error) {
+      console.error(`Could not read consolidated metrics file: ${filePath}`, error)
+      throw new Error(`Failed to load metrics data for cluster ${clusterId} and time range ${timeRange}`)
+    }
+  }
+
+  /**
+   * Applies optimal sampling to consolidated data if needed.
+   * For raw metrics: samples to target resolution (5min, 15min intervals)
+   * For aggregated data: returns as-is since it's already optimally sized
+   */
+  private applyOptimalSampling(data: MetricsResponse['data'], targetResolution: Resolution, timeRange: TimeRange): MetricsResponse['data'] {
+    const targetPoints = this.getDataPointCount(timeRange)
+    const currentPoints = data.timestamps.length
+    
+    // If data is already optimal size, return as-is
+    if (currentPoints <= targetPoints) {
+      return data
+    }
+
+    // Sample data for raw metrics files that have too many points
+    const step = currentPoints / targetPoints
+    const sampledIndices: number[] = []
+    
+    for (let i = 0; i < targetPoints; i++) {
+      const index = Math.floor(i * step)
+      if (index < currentPoints) {
+        sampledIndices.push(index)
+      }
     }
 
     return {
-      timestamps,
-      iops: { read: iopsRead, write: iopsWrite },
-      throughput: { read: throughputRead, write: throughputWrite }
+      timestamps: sampledIndices.map(i => data.timestamps[i]),
+      iops: {
+        read: sampledIndices.map(i => data.iops.read[i]),
+        write: sampledIndices.map(i => data.iops.write[i])
+      },
+      throughput: {
+        read: sampledIndices.map(i => data.throughput.read[i]),
+        write: sampledIndices.map(i => data.throughput.write[i])
+      }
     }
+  }
+
+  /**
+   * Legacy sampling method - kept for backward compatibility
+   */
+  private sampleDataForResolution(data: any[], targetResolution: Resolution, timeRange: TimeRange): any[] {
+    const targetPoints = this.getDataPointCount(timeRange)
+    
+    if (data.length <= targetPoints) {
+      return data
+    }
+
+    // Sample evenly across the data
+    const step = data.length / targetPoints
+    const sampledData: any[] = []
+    
+    for (let i = 0; i < targetPoints; i++) {
+      const index = Math.floor(i * step)
+      if (index < data.length) {
+        sampledData.push(data[index])
+      }
+    }
+
+    return sampledData
   }
 
   /**
@@ -147,8 +231,12 @@ export default class MetricsController {
       // This ensures charts render smoothly regardless of time range
       const actualResolution = resolution || this.getResolution(timeRange)
       
-      // Generate mock data (in production, this would query actual metrics database)
-      const data = this.generateMockData(actualResolution, timeRange)
+      // Read data from consolidated JSON files based on cluster and time range
+      const rawData = await this.readMetricsFromFiles(clusterId, timeRange)
+      
+      // Apply resolution-based sampling for raw metrics files that might have too many points
+      const targetResolution = this.getResolution(timeRange)
+      const data = this.applyOptimalSampling(rawData, targetResolution, timeRange)
 
       // Construct response with metadata for frontend caching and display
       const result: MetricsResponse = {
