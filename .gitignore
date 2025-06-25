@@ -57,7 +57,6 @@ temp/
 *.temp
 
 # Backend specific
-backend/data/policies/*.json
 backend/ace-manifest.json
 backend/.adonisjs/
 
@@ -80,3 +79,6 @@ pnpm-lock.yaml
 
 # Hot reload
 .hot/
+
+# Spec
+spec/
